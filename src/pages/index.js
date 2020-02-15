@@ -24,9 +24,9 @@ const IndexPage = () => (
       <SecondaryCard style={{position: 'absolute'}} position3 />
       <Tag />
     </Home>
-    <Home style={{background: "#9DD2E2"}}>
+    {/* <Home style={{background: "#9DD2E2"}}>
 
-    </Home>
+    </Home> */}
   </Layout>
 )
 
