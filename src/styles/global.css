@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #484848;
+  background-color: white;
+  text-align: center;
+}
+
+p {
+  margin: 6px 0;
+  color: #484848;
+  font-size: 14px;
+}
+
+.fab {
+  margin-right: 10px;
+  font-size: 26px;
+  color: #484848;
+}
+
+.fab:hover {
+  color: #70D6FF;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.orange-bkg {
+  background-color: #FF9D7A;
+}
+
+.purple-bkg {
+  /*background: none;*/
+  background-color: #5B3758;
+}
+
+.icon-list {
+  padding: 0;
+  list-style: none;
+}
+
+.inline {
+display: inline;
+}
+
+.circular {
+  border-radius: 50%
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-weight: 200;
+  font-size: 14px;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+#contact-form {
+  display: flex;
+  margin: 10px auto;
+  flex-direction: column;
+  width: max-content;
+}
+
+.input-area {
+  text-align: right;
+  margin: 10px 0;
+}
+
+.input-field {
+  height: 30px;
+  width: 400px;
+  border-radius: 6px;
+  border: 0;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  padding: 8px 10px;
+  color: #484848;
+  margin-left: 10px;
+}
+
+.input-field:focus {
+  outline: 0;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.message-field {
+  height: 200px;
+}
+
+.white-txt {
+  color: white;
+}
+
+@media (max-width: 900px) {
+  .profile-card {
+    width: 520px;
+    height: 300px;
+  }
+
+  .contact-card {
+    width: 500px;
+    height: 700px;
+    flex-direction: column;
+  }
+
+  .input-area {
+    display: contents;
+  }
+
+  .input-field {
+    margin: 5px 0 30px 0;
+  }
+}

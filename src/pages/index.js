@@ -1,20 +1,32 @@
 import React from "react"
 import { Link } from "gatsby"
+import styled from 'styled-components'
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import Card from "../components/card"
+import SecondaryCard from "../components/secondaryCard"
+import Tag from "../components/tag"
+
+const Home = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+`
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <Home style={{background: "#FF9D7A"}}>
+      <Card style={{position: 'absolute'}} />
+      <SecondaryCard style={{position: 'absolute'}} position2 />
+      <SecondaryCard style={{position: 'absolute'}} position3 />
+      <Tag />
+    </Home>
+    <Home style={{background: "#9DD2E2"}}>
+
+    </Home>
   </Layout>
 )
 
