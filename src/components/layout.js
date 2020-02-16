@@ -39,23 +39,23 @@ const Layout = ({ children }) => {
     }
   `)
 
-  const reducers = combineReducers({
-    backgroundColor: stylesReducer
-  });
+  // const reducers = combineReducers({
+  //   backgroundColor: stylesReducer
+  // });
 
-  const initialState = {
-    backgroundColor: "#FF9D7A",
-  };
+  // const initialState = {
+  //   backgroundColor: "#FF9D7A",
+  // };
 
-  const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-  const store = createStore(reducers, initialState, composeEnhancers(applyMiddleware(logger)));
+  // const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+  // const store = createStore(reducers, initialState, composeEnhancers(applyMiddleware(logger)));
 
   return (
-    <Provider store={store}>
+    // <Provider store={store}>
       <Container>
         <main>{children}</main>
       </Container>
-    </Provider>
+    // </Provider>
   )
 }
 
