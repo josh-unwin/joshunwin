@@ -4,15 +4,13 @@ import styled from 'styled-components'
 import ProfileImage from "./profileImage"
 import Button from "./button"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import device from '../functions/device'
 
 const CardStyled = styled.div`
   position: absolute;
-  width: 520px;
-  height: 300px;
   background-color: white;
   margin: 0 auto;
   display: flex;
-  flex-direction: row;
   border-radius: 7px;
   box-shadow: 5px 5px 14px rgba(0,0,0,0.2);
   justify-content: center;
@@ -23,24 +21,8 @@ const CardStyled = styled.div`
   }
 
   .card-column {
-    margin-right: 30px;
     display: flex;
     justify-content: center;
-    flex-direction: column;
-  }
-
-  .card-right {
-    text-align: left;
-  }
-
-  .profile-card {
-    width: 520px;
-    height: 300px;
-  }
-
-  .contact-card {
-    width: 800px;
-    height: 500px;
     flex-direction: column;
   }
 
@@ -59,6 +41,44 @@ const CardStyled = styled.div`
     display: flex;
     align-items: center
   }
+
+  @media ${device.mobileS} {
+    width: 300px;
+    height: 520px;
+    flex-direction: column;
+    align-items: center;
+    
+    .card-column {
+      margin-right: 0;
+      margin-top: 10px;
+    }
+
+    .card-right {
+      text-align: center; 
+    }
+
+    .links {
+      justify-content: center;
+    }
+  }
+
+  @media ${device.tablet} {
+    width: 520px;
+    height: 300px;
+    flex-direction: row;
+
+    .card-column {
+      margin-right: 30px;
+    }
+
+    .card-right {
+      text-align: left; 
+    }
+
+    .links {
+      justify-content: left;
+    }
+  }
 `
 
 const Card = () => (
@@ -71,7 +91,7 @@ const Card = () => (
       <h3>FULL STACK DEVELOPER</h3>
       <p>Making stuff for things.</p>
       <div className="links">
-        <Button text="Reach out" link="/contact" />
+        <Button text="Say hi &nbsp;&#128075" link="/contact" />
         <a href="http://www.github.com/josh-unwin" target="_blank" className="icon"><FontAwesomeIcon icon={['fab', 'github']} /></a>
         <a href="https://www.linkedin.com/in/josh-unwin-a4735637/" target="_blank" className="icon"><FontAwesomeIcon icon={['fab', 'linkedin']} /></a>
       </div>

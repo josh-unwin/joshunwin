@@ -11,6 +11,11 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
+import { Provider } from 'react-redux';
+import {createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import logger from 'redux-logger';
+
+import stylesReducer from '../reducers/stylesReducer'
  
 import '../styles/global.css'
 
@@ -34,10 +39,23 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const reducers = combineReducers({
+    backgroundColor: stylesReducer
+  });
+
+  const initialState = {
+    backgroundColor: "#FF9D7A",
+  };
+
+  const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+  const store = createStore(reducers, initialState, composeEnhancers(applyMiddleware(logger)));
+
   return (
-    <Container>
-      <main>{children}</main>
-    </Container>
+    <Provider store={store}>
+      <Container>
+        <main>{children}</main>
+      </Container>
+    </Provider>
   )
 }
 

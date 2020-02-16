@@ -11,7 +11,6 @@ const ButtonStyled = styled.a`
     padding: 6px 12px;
     border: 0;
     font-size: 16px;
-    font-family: 'Open Sans', sans-serif;
     margin-right: 10px;
 
   &:hover {
@@ -23,8 +22,14 @@ const ButtonStyled = styled.a`
   }
 `
 
-const Button = (props) => (
-  <ButtonStyled href={props.link}>{props.text}</ButtonStyled>
-)
+const Button = (props) => {
+  function handleClick() {
+    console.log('clicked button');
+  }
+
+  return (
+    <ButtonStyled dangerouslySetInnerHTML={{ __html: props.text}} onClick={handleClick}></ButtonStyled>
+  )
+}
 
 export default Button

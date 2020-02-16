@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from 'styled-components'
 import ProfileImage from "./profileImage"
+import device from '../functions/device'
 
 const SecondaryCardStyled = styled.div`
   position: absolute;
@@ -26,10 +27,19 @@ const SecondaryCardStyled = styled.div`
   ${props => props.position3 ?  
     'transform: translate(0, 0) rotate(6deg); z-index: 1;' 
     : ''}
+
+  @media ${device.mobileS} {
+    width: 300px;
+    height: 520px;
+  }
+
+  @media ${device.tablet} {
+    width: 520px;
+    height: 300px;
+  }
 `
 
 const SecondaryCard = (props) => {
-  console.log(props);
   const { position2, position3 } = props;
 
   return (
