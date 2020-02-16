@@ -78,7 +78,7 @@ const CardStyled = styled.div`
     flex-direction: row;
 
     .card-column {
-      margin-right: 30px;
+      margin-right: 26px;
       align-items: center;
     }
 
@@ -87,7 +87,7 @@ const CardStyled = styled.div`
     }
 
     .card-right {
-      text-align: left; 
+      align-items: start;
     }
 
     .links {
@@ -107,9 +107,10 @@ const CardStyled = styled.div`
     justify-content: center;
   }
   
-  .card__face--back, profile-image {
+  .card__face--back {
     transform: rotateY( 180deg );
     overflow: scroll;
+    padding: 10px 0;
   }
 `
 
@@ -128,7 +129,7 @@ const Card = () => {
           <ProfileImage alt="profile_image" className='profile-image' />
         </div>
         <div className="card-column card-right">
-          <h1>Josh Unwin</h1>
+          <h1>josh unwin</h1>
           <h3>FULL STACK DEVELOPER</h3>
           <p>Making stuff for things.</p>
           <div className="links">
@@ -139,7 +140,7 @@ const Card = () => {
         </div>
       </div>
       <div class="card__face card__face--back">
-        <ContactForm />
+        <ContactForm flipCard={flipCard} />
       </div>
     </CardStyled>
   )

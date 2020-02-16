@@ -1,9 +1,10 @@
-@import "~bulma/bulma.sass";
 @import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800&display=swap');
 
-// Bulma variables
+// Bulma (variables declared first)
 $primary: #70D6FF;
+@import "~bulma/bulma.sass";
 
 * {
   margin: 0;
@@ -11,7 +12,8 @@ $primary: #70D6FF;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Nunito', sans-serif;
+
   color: #484848;
   background-color: white;
   text-align: center;
@@ -50,6 +52,10 @@ p {
   background-color: #5B3758;
 }
 
+.h100 {
+  height: 100%;
+}
+
 .icon-list {
   padding: 0;
   list-style: none;
@@ -64,7 +70,7 @@ display: inline;
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 26px;
 }
 
 h2 {
