@@ -114,12 +114,12 @@ const CardStyled = styled.div`
   }
 `
 
-const Card = () => {
+const Card = (props) => {
   const [flipped, setFlipped] = useState(false)
 
   function flipCard() {
     setFlipped(!flipped);
-
+    props.setBackground('#70D6FF')
   }
 
   return (

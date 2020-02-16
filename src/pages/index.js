@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import styled from 'styled-components'
 
@@ -8,6 +8,7 @@ import Card from "../components/card"
 import SecondaryCard from "../components/secondaryCard"
 import Tag from "../components/tag"
 import { connect } from "react-redux"
+import { faStepBackward } from "@fortawesome/free-solid-svg-icons"
 
 const Home = styled.div`
   display: flex;
@@ -18,11 +19,13 @@ const Home = styled.div`
 `
 
 const IndexPage = () => {
+  const [background, setBackground] = useState("#FF9D7A");
+
   return (
     <Layout>
       <SEO title="Home" />
-      <Home style={{background: "#FF9D7A"}}>
-        <Card style={{position: 'absolute'}} />
+      <Home style={{background: background}}>
+        <Card style={{position: 'absolute'}} setBackground={setBackground} />
         <SecondaryCard style={{position: 'absolute'}} position2 />
         <SecondaryCard style={{position: 'absolute'}} position3 />
         <Tag />
