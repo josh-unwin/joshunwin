@@ -11,7 +11,7 @@ const TagStyled = styled.div`
 
     .tag-block {
       position: absolute;
-      bottom: -4px;
+      bottom: -7px;
       font-family: 'Share Tech Mono', monospace;
       font-size: 30px;
     }

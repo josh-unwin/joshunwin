@@ -1,20 +1,23 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import styled from 'styled-components'
 import ProfileImage from "./profileImage"
 import Button from "./button"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import device from '../functions/device'
+import ContactForm from './contactForm'
 
 const CardStyled = styled.div`
   position: absolute;
   background-color: white;
   margin: 0 auto;
-  display: flex;
   border-radius: 7px;
   box-shadow: 5px 5px 14px rgba(0,0,0,0.2);
-  justify-content: center;
   z-index: 3;
+
+  &.is-flipped {
+    transform: rotateY(180deg) scale(1.2);
+  }
 
   &:hover {
       box-shadow: 5px 5px 8px rgba(0,0,0,0.4);
@@ -47,10 +50,17 @@ const CardStyled = styled.div`
     height: 520px;
     flex-direction: column;
     align-items: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+
+    .card__face {
+      flex-direction: column;
+    }
     
     .card-column {
       margin-right: 0;
       margin-top: 10px;
+      align-items: center;
     }
 
     .card-right {
@@ -69,6 +79,11 @@ const CardStyled = styled.div`
 
     .card-column {
       margin-right: 30px;
+      align-items: center;
+    }
+
+    .card__face {
+      flex-direction: row;
     }
 
     .card-right {
@@ -79,24 +94,55 @@ const CardStyled = styled.div`
       justify-content: left;
     }
   }
+
+  .card__face {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+  }
+
+  .card__face--front {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card__face--back, profile-image {
+    transform: rotateY( 180deg );
+    overflow: scroll;
+  }
 `
 
-const Card = () => (
-  <CardStyled>
-    <div className="card-column">
-      <ProfileImage alt="profile_image" />
-    </div>
-    <div className="card-column card-right">
-      <h1>Josh Unwin</h1>
-      <h3>FULL STACK DEVELOPER</h3>
-      <p>Making stuff for things.</p>
-      <div className="links">
-        <Button text="Say hi &nbsp;&#128075" link="/contact" />
-        <a href="http://www.github.com/josh-unwin" target="_blank" className="icon"><FontAwesomeIcon icon={['fab', 'github']} /></a>
-        <a href="https://www.linkedin.com/in/josh-unwin-a4735637/" target="_blank" className="icon"><FontAwesomeIcon icon={['fab', 'linkedin']} /></a>
+const Card = () => {
+  const [flipped, setFlipped] = useState(false)
+
+  function flipCard() {
+    setFlipped(!flipped);
+
+  }
+
+  return (
+    <CardStyled className={flipped ? 'is-flipped' : ''}>
+      <div class="card__face card__face--front">
+        <div className="card-column">
+          <ProfileImage alt="profile_image" className='profile-image' />
+        </div>
+        <div className="card-column card-right">
+          <h1>Josh Unwin</h1>
+          <h3>FULL STACK DEVELOPER</h3>
+          <p>Making stuff for things.</p>
+          <div className="links">
+            <Button text="Say hi &nbsp;&#128075" link="/contact" flipCard={flipCard} />
+            <a href="http://www.github.com/josh-unwin" target="_blank" className="icon"><FontAwesomeIcon icon={['fab', 'github']} style={{fontSize: '26px'}} /></a>
+            <a href="https://www.linkedin.com/in/josh-unwin-a4735637/" target="_blank" className="icon"><FontAwesomeIcon icon={['fab', 'linkedin']} style={{fontSize: '26px'}} /></a>
+          </div>
+        </div>
       </div>
-    </div>
-  </CardStyled>
-)
+      <div class="card__face card__face--back">
+        <ContactForm />
+      </div>
+    </CardStyled>
+  )
+}
 
 export default Card

@@ -5,19 +5,20 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
+import '../styles/global.scss'
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { Provider } from 'react-redux';
 import {createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import logger from 'redux-logger';
 
 import stylesReducer from '../reducers/stylesReducer'
  
-import '../styles/global.css'
 
 const Container = styled.div`
   margin: 0;
@@ -28,7 +29,7 @@ const Container = styled.div`
 `
 
 const Layout = ({ children }) => {
-  library.add(fab)
+  library.add(fab, faEnvelope)
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {

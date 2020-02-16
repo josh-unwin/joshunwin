@@ -12,6 +12,7 @@ const ButtonStyled = styled.a`
     border: 0;
     font-size: 16px;
     margin-right: 10px;
+    cursor: pointer;
 
   &:hover {
     background-color: rgb(100,200,240)
@@ -25,6 +26,7 @@ const ButtonStyled = styled.a`
 const Button = (props) => {
   function handleClick() {
     console.log('clicked button');
+    props.flipCard()
   }
 
   return (

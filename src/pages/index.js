@@ -14,6 +14,7 @@ const Home = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
+  perspective: 600px;
 `
 
 const IndexPage = () => {

@@ -19,7 +19,7 @@ const ProfileImage = () => {
       placeholderImage: file(relativePath: { eq: "profile-photo.jpg" }) {
         childImageSharp {
           fixed(width: 180) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_withWebp_tracedSVG
           }
         }
       }
