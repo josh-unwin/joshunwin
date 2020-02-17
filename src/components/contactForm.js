@@ -14,7 +14,15 @@ const Form = styled.div`
   width: 100%;
   height: 100%;
   transform: translateZ(0);
-  background: white;
+  background-color: ${({ theme }) => theme.cardBkg};
+  transition: 1s ease;
+
+  #contact-form {
+    display: flex;
+    margin: 10px auto;
+    flex-direction: column;
+    width: max-content;
+  }  
 
   .feedback {
     width: 50%;
@@ -47,6 +55,7 @@ const Form = styled.div`
     position: absolute;
     top: 5px;
     left: 12px;
+    color: ${({ theme }) => theme.text};
   }
 `
 

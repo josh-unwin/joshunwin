@@ -6,14 +6,14 @@ const SecondaryCardStyled = styled.div`
   position: absolute;
   width: 520px;
   height: 300px;
-  background-color: white;
+  background-color: ${({ theme }) => theme.cardBkg};
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   border-radius: 7px;
-  box-shadow: 5px 5px 14px rgba(0,0,0,0.2);
+  box-shadow: 3px 3px 15px rgba(0,0,0,0.2);
   justify-content: center;
-  transition: transform 1s ease, width 1s ease, height 1s ease;
+  transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease, background-color 1s ease;
 
   &:hover {
       box-shadow: 5px 5px 8px rgba(0,0,0,0.4);

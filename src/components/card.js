@@ -11,12 +11,12 @@ import ContactForm from './contactForm'
 
 const CardStyled = styled.div`
   position: absolute;
-  background-color: white;
+  background-color: ${({ theme }) => theme.cardBkg};
   margin: 0 auto;
   border-radius: 7px;
-  box-shadow: 5px 5px 14px rgba(0,0,0,0.2);
+  box-shadow: 3px 3px 15px rgba(0,0,0,0.2);
   z-index: 3;
-  transition: transform 1s ease, width 1s ease, height 1s ease;
+  transition: transform 0.7s ease, width 0.7s ease, height 0.7s ease, background-color 1s ease;
 
 
   &:hover {
@@ -32,7 +32,8 @@ const CardStyled = styled.div`
   .icon {
     margin-right: 10px;
     font-size: 26px;
-    color: #484848;
+    color: ${({ theme }) => theme.text};
+    transition: 1s ease;
   }
   
   .icon:hover {
