@@ -4,6 +4,9 @@ import styled from 'styled-components'
 import ProfileImage from "./profileImage"
 import Button from "./button"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FaReact } from 'react-icons/fa'
+import { FaJsSquare } from 'react-icons/fa'
+import { FaGem } from 'react-icons/fa'
 import device from '../functions/device'
 import ContactForm from './contactForm'
 
@@ -109,8 +112,13 @@ const CardStyled = styled.div`
   
   .card__face--back {
     transform: rotateY( 180deg );
-    overflow: scroll;
     padding: 10px 0;
+  }
+
+  .react-icon {
+    font-size: 1em;
+    vertical-align: middle;
+    margin-bottom: 3px;
   }
 `
 
@@ -119,7 +127,7 @@ const Card = (props) => {
 
   function flipCard() {
     setFlipped(!flipped);
-    props.setBackground('#70D6FF')
+    props.setBackgroundSelection(props.backgroundSelection === 1 ? 0 : 1);
   }
 
   return (
@@ -132,6 +140,8 @@ const Card = (props) => {
           <h1>josh unwin</h1>
           <h3>FULL STACK DEVELOPER</h3>
           <p>Making stuff for things.</p>
+
+          <p><FaReact className='react-icon' /> React, <FaJsSquare className='react-icon' /> JS, <FaGem className='react-icon' /> Rails</p>
           <div className="links">
             <Button text="Say hi &nbsp;&#128075" link="/contact" flipCard={flipCard} />
             <a href="http://www.github.com/josh-unwin" target="_blank" className="icon"><FontAwesomeIcon icon={['fab', 'github']} style={{fontSize: '26px'}} /></a>

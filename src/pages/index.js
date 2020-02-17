@@ -16,16 +16,25 @@ const Home = styled.div`
   align-items: center;
   height: 100vh;
   perspective: 600px;
+  transition: background-color 1s ease;
+
+  .orange-bkg {
+    background-color: #FF9D7A;
+  }
+  
+  .purple-bkg {
+    background-color: #70D6FF;
+  }
 `
 
 const IndexPage = () => {
-  const [background, setBackground] = useState("#FF9D7A");
+  const [backgroundSelection, setBackgroundSelection] = useState(0);
 
   return (
     <Layout>
       <SEO title="Home" />
-      <Home style={{background: background}}>
-        <Card style={{position: 'absolute'}} setBackground={setBackground} />
+      <Home className={backgroundSelection === 0 ? 'orange-bkg' : 'purple-bkg'}>
+        <Card style={{position: 'absolute'}} setBackgroundSelection={setBackgroundSelection} backgroundSelection={backgroundSelection} />
         <SecondaryCard style={{position: 'absolute'}} position2 />
         <SecondaryCard style={{position: 'absolute'}} position3 />
         <Tag />
