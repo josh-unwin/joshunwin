@@ -16,10 +16,8 @@ const CardStyled = styled.div`
   border-radius: 7px;
   box-shadow: 5px 5px 14px rgba(0,0,0,0.2);
   z-index: 3;
+  transition: transform 1s ease, width 1s ease, height 1s ease;
 
-  &.is-flipped {
-    transform: rotateY(180deg) scale(1.2);
-  }
 
   &:hover {
       box-shadow: 5px 5px 8px rgba(0,0,0,0.4);
@@ -52,8 +50,13 @@ const CardStyled = styled.div`
     height: 520px;
     flex-direction: column;
     align-items: center;
-    transition: transform 1s;
     transform-style: preserve-3d;
+
+    &.is-flipped {
+      transform: rotateY(180deg);
+      width: 320px;
+      height: 580px;
+    }
 
     .card__face {
       flex-direction: column;
@@ -78,6 +81,12 @@ const CardStyled = styled.div`
     width: 520px;
     height: 300px;
     flex-direction: row;
+
+    &.is-flipped {
+      transform: rotateY(180deg);
+      width: 600px;
+      height: 550px;
+    }
 
     .card-column {
       margin-right: 26px;
@@ -131,7 +140,7 @@ const Card = (props) => {
 
   return (
     <CardStyled className={flipped ? 'is-flipped' : ''}>
-      <div class="card__face card__face--front">
+      <div className="card__face card__face--front">
         <div className="card-column">
           <ProfileImage alt="profile_image" className='profile-image' />
         </div>
@@ -148,7 +157,7 @@ const Card = (props) => {
           </div>
         </div>
       </div>
-      <div class="card__face card__face--back">
+      <div className="card__face card__face--back">
         <ContactForm flipCard={flipCard} />
       </div>
     </CardStyled>

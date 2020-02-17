@@ -13,6 +13,7 @@ const SecondaryCardStyled = styled.div`
   border-radius: 7px;
   box-shadow: 5px 5px 14px rgba(0,0,0,0.2);
   justify-content: center;
+  transition: transform 1s ease, width 1s ease, height 1s ease;
 
   &:hover {
       box-shadow: 5px 5px 8px rgba(0,0,0,0.4);

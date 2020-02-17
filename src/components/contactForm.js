@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { FaArrowLeft } from 'react-icons/fa'
+import { FaCheck } from 'react-icons/fa'
 import axios from "axios"
 import * as qs from "query-string"
 
@@ -17,9 +18,10 @@ const Form = styled.div`
 
   .feedback {
     width: 50%;
-    padding: 10px 10px;
+    padding: 5px 5px;
+    font-size: 0.8em;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin: 5px 0;
   };
 
   .sent {
@@ -50,7 +52,7 @@ const Form = styled.div`
 
 const ContactForm = (props) => {
   const [messageFeedback, setMessageFeedback] = useState('');
-  const [messageStatus, setMessageStatus] = useState('');
+  const [messageStatus, setMessageStatus] = useState('unsent');
 
   function flipBack() {
     console.log('go back');
@@ -58,6 +60,8 @@ const ContactForm = (props) => {
   }
 
   function handleSubmit(e) {
+    console.log(messageStatus);
+    console.log('hello');
     e.preventDefault();
     e.persist();
 
@@ -86,38 +90,52 @@ const ContactForm = (props) => {
           setMessageStatus('failed')
         }
       )
+    console.log(messageStatus);
   }
 
-  return(
-    <Form>
-      <FaArrowLeft onClick={flipBack} className='back-arrow' />
-      <h2>Get in touch below!</h2>
-      {messageFeedback && 
-      <span className={messageStatus === 'sent' ? 'feedback sent' : 'feedback error'}
-            style={{width:'90%'}}>
-              {messageFeedback}
-      </span>}
-      <form onSubmit={e => handleSubmit(e)} id='contact-form' className='h100' method="post" 
-            name="Contact Form" netlify-honeypot="bot-field" data-netlify="true"
-            style={{width:'90%'}}>
-        <input type="hidden" name="bot-field" />
-        <input type="hidden" name="form-name" value="Contact Form" />
-        <div className="field">
-            <div className="control">
-              <input className="input " type="email" placeholder="Email" name="email" />
-            </div>
-        </div>
-        <div className="field h100">
-            <div className="control h100">
-              <textarea className="textarea h100" placeholder="Message" name="message"></textarea>
-            </div>
-        </div>
-        <div className="control">
-          <button className="button is-small is-primary" style={{color: 'white'}}>Submit</button>
-        </div>
-        </form>
+  switch (messageStatus) {
+    default:
+      return(
+      <Form>
+        <FaArrowLeft onClick={flipBack} className='back-arrow' />
+        <h2>Get in touch below!</h2>
+        {messageFeedback && 
+        <span className={messageStatus === 'sent' ? 'feedback sent' : 'feedback error'}
+              style={{width:'90%'}}>
+                {messageFeedback}
+        </span>}
+        <form onSubmit={e => handleSubmit(e)} id='contact-form' className='h100' method="post" 
+              name="Contact Form" netlify-honeypot="bot-field" data-netlify="true"
+              style={{width:'90%'}}>
+          <input type="hidden" name="bot-field" />
+          <input type="hidden" name="form-name" value="Contact Form" />
+          <div className="field">
+              <div className="control">
+                <input className="input " type="email" placeholder="Email" name="email" />
+              </div>
+          </div>
+          <div className="field h100">
+              <div className="control h100">
+                <textarea className="textarea h100" placeholder="Message" name="message"></textarea>
+              </div>
+          </div>
+          <div className="control">
+            <button className="button is-small is-primary" style={{color: 'white'}}>Submit</button>
+          </div>
+          </form>
+        </Form>
+      )
+    case 'sent':
+      return (
+        <Form>
+          <span style={{fontSize: '4em', color: '#00D1B2'}}><FaCheck /></span>
+          <h3>I've got it!</h3>
+          <p style={{textAlign: 'center'}}>
+            Thanks for your message, I'll get back to you asap.
+          </p>
       </Form>
-  )
+      )
+  }
 }
 
 export default ContactForm
