@@ -4,6 +4,7 @@
 
 // Bulma (variables declared first)
 $primary: #70D6FF;
+$input-focus-border-color: $primary;
 @import "~bulma/bulma.sass";
 
 * {

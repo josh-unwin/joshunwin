@@ -25,7 +25,6 @@ const ButtonStyled = styled.a`
 
 const Button = (props) => {
   function handleClick() {
-    console.log('clicked button');
     props.flipCard()
   }
 

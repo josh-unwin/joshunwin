@@ -55,13 +55,11 @@ const ContactForm = (props) => {
   const [messageStatus, setMessageStatus] = useState('unsent');
 
   function flipBack() {
-    console.log('go back');
     props.flipCard()
   }
 
   function handleSubmit(e) {
-    console.log(messageStatus);
-    console.log('hello');
+    console.log(e);
     e.preventDefault();
     e.persist();
 
@@ -70,26 +68,25 @@ const ContactForm = (props) => {
       "email": e.target[2].value,
       "message": e.target[3].value
     };
-    // Object.keys(this.refs).map(key => (formData[key] = this.refs[key].value))
     
     const axiosOptions = {
-      url: '/contact/',
+      url: '/',
       method: "post",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       data: qs.stringify(formData),
       }
 
-      axios(axiosOptions)
-        .then(response => {
-          setMessageFeedback("Message has been sent, thank you!");
-          setMessageStatus('sent');
-          document.querySelector('#contact-form').reset();
-        })
-        .catch(err => {
-          setMessageFeedback("There was a problem :( Please check your message and try again.");
-          setMessageStatus('failed')
-        }
-      )
+    axios(axiosOptions)
+      .then(response => {
+        console.log(response);
+        setMessageFeedback("Message has been sent, thank you!");
+        setMessageStatus('sent');
+      })
+      .catch(err => {
+        console.log(err);
+        setMessageFeedback("There was a problem :( Please check your message and try again.");
+        setMessageStatus('failed')
+      })
     console.log(messageStatus);
   }
 
@@ -129,7 +126,7 @@ const ContactForm = (props) => {
       return (
         <Form>
           <span style={{fontSize: '4em', color: '#00D1B2'}}><FaCheck /></span>
-          <h3>I've got it!</h3>
+          <h2>I've got it!</h2>
           <p style={{textAlign: 'center'}}>
             Thanks for your message, I'll get back to you asap.
           </p>
