@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from 'styled-components'
 
 const TagStyled = styled.div`
@@ -11,9 +10,9 @@ const TagStyled = styled.div`
 
     .tag-block {
       position: absolute;
-      bottom: -7px;
+      bottom: -5px;
       font-family: 'Share Tech Mono', monospace;
-      font-size: 30px;
+      font-size: 28px;
     }
 
     .blink_me {

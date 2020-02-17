@@ -1,7 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from 'styled-components'
-import ProfileImage from "./profileImage"
 import device from '../functions/device'
 
 const SecondaryCardStyled = styled.div`
