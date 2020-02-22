@@ -17,7 +17,6 @@ const Home = styled.div`
 `
 
 const IndexPage = (props) => {
-  console.log(props);
   const [backgroundSelection, setBackgroundSelection] = useState(0);
 
   return (

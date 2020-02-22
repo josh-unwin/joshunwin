@@ -17,7 +17,6 @@ const LightSwitchStyled = styled.div`
 
 const LightSwitch = (props) => {
   function handleClick() {
-    console.log('clicked');
     props.setSelectedTheme(props.selectedTheme === 'light' ? 'dark' : 'light')
   }
 
