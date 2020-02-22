@@ -68,7 +68,6 @@ const ContactForm = (props) => {
   }
 
   function handleSubmit(e) {
-    console.log(e);
     e.preventDefault();
     e.persist();
 
@@ -96,7 +95,6 @@ const ContactForm = (props) => {
         setMessageFeedback("There was a problem :( Please check your message and try again.");
         setMessageStatus('failed')
       })
-    console.log(messageStatus);
   }
 
   switch (messageStatus) {

@@ -21,7 +21,9 @@ const Container = styled.div`
 `
 
 const Layout = ({ children }) => {
-  const [selectedTheme, setSelectedTheme] = useState('light')
+  const themes = ["light", "dark"];
+  const randomThemeSelection = themes[Math.floor(Math.random() * themes.length)];
+  const [selectedTheme, setSelectedTheme] = useState(randomThemeSelection)
   library.add(fab, faEnvelope)
 
   return (
