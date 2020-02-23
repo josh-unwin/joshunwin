@@ -9,6 +9,7 @@ import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from '../styles/theme';
 import { GlobalStyles } from '../styles/global';
 import LightSwitch from "./lightSwitch"
+import { useEffect } from 'react'
 
 
 
@@ -22,10 +23,14 @@ const Container = styled.div`
 
 const Layout = ({ children }) => {
   const themes = ["light", "dark"];
-  // const randomThemeSelection = themes[Math.floor(Math.random() * themes.length)];
-  const [selectedTheme, setSelectedTheme] = useState('light')
-  library.add(fab, faEnvelope)
-
+  let randomThemeSelection = '';
+  library.add(fab, faEnvelope);
+  const [selectedTheme, setSelectedTheme] = useState('light');
+  
+  useEffect(() => {
+    setSelectedTheme(themes[Math.floor(Math.random() * themes.length)]);
+  }, []);
+  
   return (
     <ThemeProvider theme={selectedTheme === 'light' ? lightTheme : darkTheme}>
       <GlobalStyles />
