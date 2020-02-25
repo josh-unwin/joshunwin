@@ -19,13 +19,18 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            url
+            urlInsecure
+            image
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || site.siteMetadata.description;
+  const imgUrl = `${site.siteMetadata.url}${site.siteMetadata.image}`
+  const imgUrlInsecure = `${site.siteMetadata.urlInsecure}${site.siteMetadata.image}`
 
   return (
     <Helmet
@@ -38,6 +43,18 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          name: `image`,
+          content: imgUrl,
+        },
+        {
+          property: `og:image`,
+          content: imgUrlInsecure,
+        },
+        {
+          property: `og:image:secure_url`,
+          content: imgUrl,
         },
         {
           property: `og:title`,
@@ -54,6 +71,10 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `twitter:card`,
           content: `summary`,
+        },
+        {
+          property: `twitter:image`,
+          content: imgUrlInsecure,
         },
         {
           name: `twitter:creator`,

@@ -1,8 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: `Josh Unwin`,
-    description: `Josh Unwin | Portfolio`,
+    description: `Josh Unwin | Full Stack Developer`,
     author: `@joshunwin`,
+    url: 'https://www.joshunwin.com',
+    urlInsecure: 'http://www.joshunwin.com',
+    image: '/images/seo-preview.png'
   },
   plugins: [
     'gatsby-plugin-styled-components',
@@ -27,6 +30,12 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/joshunwin.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-128638660-1",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
