@@ -21,7 +21,7 @@ const IndexPage = (props) => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Josh Unwin" />
       <Home className={backgroundSelection === 0 ? 'bkg-color1' : 'bkg-color2'}>
         <Card style={{position: 'absolute'}} setBackgroundSelection={setBackgroundSelection} backgroundSelection={backgroundSelection} />
         <SecondaryCard style={{position: 'absolute'}} position2 />
