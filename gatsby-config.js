@@ -8,6 +8,13 @@ module.exports = {
     image: '/images/seo-preview.png'
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-128638660-1",
+        head: true
+      },
+    },
     'gatsby-plugin-styled-components',
     `gatsby-plugin-react-helmet`,
     {
@@ -31,13 +38,7 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/joshunwin.png`, // This path is relative to the root of the site.
       },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-128638660-1",
-      },
-    },
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
