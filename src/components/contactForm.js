@@ -139,6 +139,7 @@ const ContactForm = (props) => {
     case 'sent':
       return (
         <Form>
+          <FaArrowLeft onClick={flipBack} className='back-arrow' />
           <span style={{fontSize: '4em', color: '#00D1B2'}}><FaCheck /></span>
           <h2>I've got it!</h2>
           <p style={{textAlign: 'center'}}>
