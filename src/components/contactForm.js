@@ -76,25 +76,32 @@ const ContactForm = (props) => {
       "email": e.target[2].value,
       "message": e.target[3].value
     };
-    
-    const axiosOptions = {
-      url: '/',
-      method: "post",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      data: qs.stringify(formData),
-      }
 
-    axios(axiosOptions)
-      .then(response => {
-        console.log(response);
-        setMessageFeedback("Message has been sent, thank you!");
-        setMessageStatus('sent');
-      })
-      .catch(err => {
-        console.log(err);
-        setMessageFeedback("There was a problem :( Please check your message and try again.");
-        setMessageStatus('failed')
-      })
+    if (formData.email === "" || formData.message === "") {
+      setMessageStatus('formNotComplete')
+      setMessageFeedback("Looks like there's an issue, have you filled in both fields?")
+      console.log("sorry there's an issue with the form");
+      console.log(messageStatus);
+    } else {
+      const axiosOptions = {
+        url: '/',
+        method: "post",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        data: qs.stringify(formData),
+        }
+
+      axios(axiosOptions)
+        .then(response => {
+          console.log(response);
+          setMessageFeedback("Message has been sent, thank you!");
+          setMessageStatus('sent');
+        })
+        .catch(err => {
+          console.log(err);
+          setMessageFeedback("There was a problem :( Please check your message and try again.");
+          setMessageStatus('failed')
+        })
+      }
   }
 
   switch (messageStatus) {

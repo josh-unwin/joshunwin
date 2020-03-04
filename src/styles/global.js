@@ -52,4 +52,8 @@ export const GlobalStyles = createGlobalStyle`
   .bkg-color3 {
     background-color: #5B3758;
   }
+
+  .feedback {
+    color: ${({ theme }) => theme.textOriginal};
+  }
 `
