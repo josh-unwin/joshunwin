@@ -57,6 +57,10 @@ const Form = styled.div`
     left: 12px;
     color: ${({ theme }) => theme.text};
   }
+
+  .message-field {
+    flex-grow: 1;
+  }
 `
 
 const ContactForm = (props) => {
@@ -125,7 +129,7 @@ const ContactForm = (props) => {
                 <input className="input " type="email" placeholder="Email" name="email" />
               </div>
           </div>
-          <div className="field h100">
+          <div className="field message-field">
               <div className="control h100">
                 <textarea className="textarea h100" placeholder="Message" name="message"></textarea>
               </div>

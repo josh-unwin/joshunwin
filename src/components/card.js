@@ -11,17 +11,9 @@ import ContactForm from './contactForm'
 
 const CardStyled = styled.div`
   position: absolute;
-  background-color: ${({ theme }) => theme.cardBkg};
   margin: 0 auto;
-  border-radius: 7px;
-  box-shadow: 3px 3px 15px rgba(0,0,0,0.2);
   z-index: 3;
   transition: transform 0.7s ease, width 0.7s ease, height 0.7s ease, background-color 1s ease;
-
-
-  &:hover {
-      box-shadow: 5px 5px 8px rgba(0,0,0,0.4);
-  }
 
   .card-column {
     display: flex;
@@ -112,16 +104,25 @@ const CardStyled = styled.div`
     height: 100%;
     width: 100%;
     backface-visibility: hidden;
+    transition: transform 0.7s ease, width 0.7s ease, height 0.7s ease, background-color 1s ease;
+    box-shadow: 3px 3px 15px rgba(0,0,0,0.2);
+    border-radius: 7px;
+
+    &:hover {
+        box-shadow: 5px 5px 8px rgba(0,0,0,0.4);
+    }
   }
 
   .card__face--front {
     display: flex;
     justify-content: center;
+    background-color: ${({ theme }) => theme.cardBkg};
   }
   
   .card__face--back {
     transform: rotateY( 180deg );
     padding: 10px 0;
+    background-color: ${({ theme }) => theme.cardBkg};
   }
 
   .react-icon {
