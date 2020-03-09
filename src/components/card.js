@@ -156,6 +156,7 @@ const Card = (props) => {
             <Button text="Say hi &nbsp;&#128075" link="/contact" flipCard={flipCard} />
             <a href="http://www.github.com/josh-unwin" target="_blank" className="icon"><FontAwesomeIcon icon={['fab', 'github']} style={{fontSize: '26px'}} /></a>
             <a href="https://www.linkedin.com/in/josh-unwin-a4735637/" target="_blank" className="icon"><FontAwesomeIcon icon={['fab', 'linkedin']} style={{fontSize: '26px'}} /></a>
+            <a href="https://keybase.io/joshunwin/" target="_blank" className="icon"><FontAwesomeIcon icon={['fab', 'keybase']} style={{fontSize: '26px'}} /></a>
           </div>
         </div>
       </div>
