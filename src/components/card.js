@@ -3,9 +3,7 @@ import styled from 'styled-components'
 import ProfileImage from "./profileImage"
 import Button from "./button"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { FaReact } from 'react-icons/fa'
-import { FaJsSquare } from 'react-icons/fa'
-import { FaGem } from 'react-icons/fa'
+import { FaReact, FaJsSquare, FaGem, FaRss, FaPython } from 'react-icons/fa'
 import device from '../functions/device'
 import ContactForm from './contactForm'
 
@@ -125,7 +123,7 @@ const CardStyled = styled.div`
     background-color: ${({ theme }) => theme.cardBkg};
   }
 
-  .react-icon {
+  .skills-icon {
     font-size: 1em;
     vertical-align: middle;
     margin-bottom: 3px;
@@ -151,9 +149,10 @@ const Card = (props) => {
           <h3>FULL STACK DEVELOPER</h3>
           <p>Making stuff for things.</p>
 
-          <p><FaReact className='react-icon' /> React, <FaJsSquare className='react-icon' /> JS, <FaGem className='react-icon' /> Rails</p>
+          <p><FaReact className='skills-icon' /> React | <FaJsSquare className='skills-icon' /> JS | <FaGem className='skills-icon' /> Rails | <FaPython className='skills-icon' /> Python</p>
           <div className="links">
             <Button text="Say hi &nbsp;&#128075" link="/contact" flipCard={flipCard} />
+            <a href="https://coda.io/@josh-unwin/blog" target="_blank" className="icon"><FaRss style={{fontSize: '26px'}} /></a>
             <a href="http://www.github.com/josh-unwin" target="_blank" className="icon"><FontAwesomeIcon icon={['fab', 'github']} style={{fontSize: '26px'}} /></a>
             <a href="https://www.linkedin.com/in/josh-unwin-a4735637/" target="_blank" className="icon"><FontAwesomeIcon icon={['fab', 'linkedin']} style={{fontSize: '26px'}} /></a>
             <a href="https://keybase.io/joshunwin/" target="_blank" className="icon"><FontAwesomeIcon icon={['fab', 'keybase']} style={{fontSize: '26px'}} /></a>
