@@ -10,12 +10,12 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/react-fontawesome": "^0.1.8",
     "axios": "^0.19.2",
-    "bulma": "^0.8.0",
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-google-analytics": "^2.1.36",
     "gatsby-plugin-manifest": "^2.2.39",
     "gatsby-plugin-offline": "^3.0.32",
+    "gatsby-plugin-postcss": "^2.3.2",
     "gatsby-plugin-react-helmet": "^3.1.21",
     "gatsby-plugin-sass": "^2.1.28",
     "gatsby-plugin-sharp": "^2.4.3",
@@ -44,7 +44,8 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^25.1.0",
     "prettier": "^1.19.1",
-    "react-test-renderer": "^16.13.0"
+    "react-test-renderer": "^16.13.0",
+    "tailwindcss": "^1.4.6"
   },
   "keywords": [
     "gatsby"
@@ -55,6 +56,7 @@
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
+    "dev": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "jest"
