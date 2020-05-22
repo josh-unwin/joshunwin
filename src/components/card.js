@@ -124,6 +124,7 @@ const CardStyled = styled.div`
   }
 
   .skills-icon {
+    display: inline;
     font-size: 1em;
     vertical-align: middle;
     margin-bottom: 3px;

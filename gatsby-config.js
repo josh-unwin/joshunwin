@@ -8,6 +8,7 @@ module.exports = {
     image: '/images/seo-preview.png'
   },
   plugins: [
+    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -15,6 +16,20 @@ module.exports = {
         head: true
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/projects-markdown`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/project-images`,
+      },
+    },
+    `gatsby-transformer-remark`,
     'gatsby-plugin-styled-components',
     `gatsby-plugin-react-helmet`,
     {
@@ -27,7 +42,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     'gatsby-plugin-sass',
-    `gatsby-plugin-postcss`,
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

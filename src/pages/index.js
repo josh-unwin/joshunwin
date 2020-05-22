@@ -5,6 +5,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Card from "../components/card"
 import SecondaryCard from "../components/secondaryCard"
+import ButtonsContainer from "../components/buttonsContainer"
+import ProjectsCard from "../components/projectsCard"
 import Tag from "../components/tag"
 
 const Home = styled.div`
@@ -24,8 +26,9 @@ const IndexPage = (props) => {
       <SEO title="Josh Unwin" />
       <Home className={backgroundSelection === 0 ? 'bkg-color1' : 'bkg-color2'}>
         <Card style={{position: 'absolute'}} setBackgroundSelection={setBackgroundSelection} backgroundSelection={backgroundSelection} />
-        <SecondaryCard style={{position: 'absolute'}} position2 />
+        <ProjectsCard style={{position: 'absolute'}} position2 />
         <SecondaryCard style={{position: 'absolute'}} position3 />
+        <ButtonsContainer />
         <Tag />
       </Home>
     </Layout>
