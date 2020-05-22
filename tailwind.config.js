@@ -1,7 +1,15 @@
 module.exports = {
-  purge: [],
+  purge: [
+    './src/**/*.html',
+    './src/**/*.jsx',
+    './src/**/*.js',
+  ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'josh-blue': '#70D6FF',
+      }
+    },
   },
   variants: {},
   plugins: [],

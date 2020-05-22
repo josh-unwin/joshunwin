@@ -22,7 +22,11 @@ const Form = styled.div`
     margin: 10px auto;
     flex-direction: column;
     width: max-content;
-  }  
+  }
+
+  .input-field {
+    color: ${({ theme }) => theme.textOriginal};
+  }
 
   .feedback {
     width: 50%;
@@ -124,18 +128,18 @@ const ContactForm = (props) => {
               style={{width:'90%'}}>
           <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="Contact Form" />
-          <div className="field">
-              <div className="control">
-                <input className="input " type="email" placeholder="Email" name="email" />
+          <div className="my-1 field w-full">
+              <div className="control w-full">
+                <input className="input-field p-2 w-full rounded border border-gray-300" type="email" placeholder="Email" name="email" />
               </div>
           </div>
-          <div className="field message-field">
-              <div className="control h100">
-                <textarea className="textarea h100" placeholder="Message" name="message"></textarea>
+          <div className="my-1 field message-field w-full">
+              <div className="control h100 w-full">
+                <textarea className="input-field textarea h100 p-2 w-full rounded border border-gray-300" placeholder="Message" name="message"></textarea>
               </div>
           </div>
           <div className="control">
-            <button className="button is-small is-primary" style={{color: 'white'}}>Submit</button>
+            <button className="bg-josh-blue rounded px-3 py-1 mt-1" style={{color: 'white'}}>Submit</button>
           </div>
           </form>
         </Form>
