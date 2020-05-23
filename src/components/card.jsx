@@ -132,15 +132,13 @@ const CardStyled = styled.div`
 `
 
 const Card = (props) => {
-  const [flipped, setFlipped] = useState(false)
-
   function flipCard() {
-    setFlipped(!flipped);
+    props.setFlipped(!props.flipped);
     props.setBackgroundSelection(props.backgroundSelection === 1 ? 0 : 1);
   }
 
   return (
-    <CardStyled className={flipped ? 'is-flipped' : ''}>
+    <CardStyled className={props.flipped ? 'is-flipped' : ''}>
       <div className="card__face card__face--front">
         <div className="card-column">
           <ProfileImage alt="profile_image" className='profile-image' />

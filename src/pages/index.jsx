@@ -21,15 +21,19 @@ const Home = styled.div`
 const IndexPage = (props) => {
   const [backgroundSelection, setBackgroundSelection] = useState(0);
   const [isProjectsOpen, setIsProjectsOpen] = useState(false);
+  const [isPrimaryCardFlipped, setIsPrimaryCardFlipped] = useState(false)
 
   return (
     <Layout>
       <SEO title="Josh Unwin" />
       <Home className={backgroundSelection === 0 ? 'bkg-color1' : 'bkg-color2'}>
-          <Card style={{position: 'absolute'}} setBackgroundSelection={setBackgroundSelection} backgroundSelection={backgroundSelection} />
+          <Card style={{position: 'absolute'}} 
+              setBackgroundSelection={setBackgroundSelection} 
+              backgroundSelection={backgroundSelection}
+              flipped={isPrimaryCardFlipped} setFlipped={setIsPrimaryCardFlipped} />
           <ProjectsCard isProjectsOpen={isProjectsOpen} setIsProjectsOpen={setIsProjectsOpen} style={{position: 'absolute'}} position2 />
           <SecondaryCard style={{position: 'absolute'}} position3 />
-          <ButtonsContainer isProjectsOpen={isProjectsOpen} setIsProjectsOpen={setIsProjectsOpen}/>
+          <ButtonsContainer isProjectsOpen={isProjectsOpen} setIsProjectsOpen={setIsProjectsOpen} isPrimaryCardFlipped={isPrimaryCardFlipped}/>
         <Tag />
       </Home>
     </Layout>

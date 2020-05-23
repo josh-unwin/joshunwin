@@ -2,9 +2,8 @@ import React, { useEffect } from "react"
 import styled from 'styled-components'
 import device from '../functions/device'
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import BackButton from '../components/backButton'
+import ProjectItem from "./projectItem"
 
 const ProjectsCardStyled = styled.div`
   position: absolute;
@@ -101,25 +100,7 @@ const ProjectsCard = (props) => {
           <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 pb-8">
             {projects.map(project => {
               return (
-                <div className="">
-                  <span className="text-xl text-bold tracking-wide">{project.node.frontmatter.title}</span>
-                  <a href={project.node.frontmatter.url} target="_blank">
-                    <div className="w-full h-56 object-cover">
-                      <Img style={{width: '100%', height: '100%'}} imgStyle={{ objectFit: 'cover' }} fluid={project.node.frontmatter.image.childImageSharp.fluid} />
-                    </div>
-                  </a>
-                  <div className="flex w-full my-2">
-                    <span className="flex-grow text-center">
-                      <a className="cursor-pointer hover-link" href={project.node.frontmatter.url} target="_blank"><FaExternalLinkAlt className="inline mb-1" /> View project</a>
-                    </span>
-                    <span className="flex-grow text-center">
-                      <a className="cursor-pointer hover-link" href={project.node.frontmatter.repo} target="_blank"><FaGithub className="inline mb-1" /> Git repo</a>
-                    </span>
-                  </div>
-                  <hr />
-                  <p><span className="text-blue-500">Contribution: </span>{project.node.frontmatter?.contribution}</p>
-                  <p><span className="text-blue-500">Key Technologies: </span>{project.node.frontmatter?.technologies?.join(", ")}</p>
-                  <div className="text-sm" dangerouslySetInnerHTML={{ __html: project.node.html }} /></div>
+                <ProjectItem project={project.node} />
               )
             })}
           </div>
