@@ -4,6 +4,7 @@ backend:
   branch: master
 
 media_folder: "src/project-images"
+public_folder: "../project-images"
 
 collections:
 - name: "projects" # Used in routes, e.g., /admin/collections/blog
