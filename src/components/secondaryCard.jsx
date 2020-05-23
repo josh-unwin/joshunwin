@@ -16,7 +16,7 @@ const SecondaryCardStyled = styled.div`
   transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease, background-color 1s ease;
 
   &:hover {
-      box-shadow: 5px 5px 8px rgba(0,0,0,0.4);
+      box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
   }
 
   ${props => props.position2 ?  

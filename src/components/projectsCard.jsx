@@ -33,7 +33,7 @@ const ProjectsCardStyled = styled.div`
     overflow: scroll;
 
     &:hover {
-        box-shadow: 5px 5px 8px rgba(0,0,0,0.4);
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
     }
   
     
@@ -96,13 +96,13 @@ const ProjectsCard = () => {
 
   return (
     <ProjectsCardStyled onClick={expandCard}>
-      <div className="projects-card py-3 px-3 sm:px-24">
+      <div className="projects-card px-3 sm:px-24">
         <div className="projects-card-content">
-          <h2 className="text-2xl mb-6">Coding Projects</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
+          <h2 className="text-2xl my-8">Coding Projects</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
             {projects.map(project => {
               return (
-                <div className="p-1 sm:p-4">
+                <div className="">
                   <span className="text-xl tracking-wide">{project.node.frontmatter.title}</span>
                   <div className="w-full h-48 object-cover">
                     <Img style={{width: '100%', height: '100%'}} imgStyle={{ objectFit: 'cover' }} fluid={project.node.frontmatter.image.childImageSharp.fluid} />

@@ -107,7 +107,7 @@ const CardStyled = styled.div`
     border-radius: 7px;
 
     &:hover {
-        box-shadow: 5px 5px 8px rgba(0,0,0,0.4);
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
     }
   }
 
