@@ -1,6 +1,6 @@
 import React from "react"
 import styled from 'styled-components'
-import { FaLightbulb } from 'react-icons/fa'
+import { FaAdjust } from 'react-icons/fa'
 
 const LightSwitchStyled = styled.div`
   position: absolute;
@@ -9,10 +9,6 @@ const LightSwitchStyled = styled.div`
   font-size: 35px;
   cursor: pointer;
   z-index: 1;
-
-  &:hover {
-    color: #a8c1e8;
-  }
 `
 
 const LightSwitch = (props) => {
@@ -21,7 +17,7 @@ const LightSwitch = (props) => {
   }
 
   return (
-    <LightSwitchStyled><FaLightbulb  onClick={handleClick}/></LightSwitchStyled>
+    <LightSwitchStyled className="hover-link"><FaAdjust  onClick={handleClick}/></LightSwitchStyled>
   )
 }
 

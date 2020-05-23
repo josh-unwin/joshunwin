@@ -9,4 +9,4 @@ technologies:
   - Rails
   - Javascript
 ---
-**Wagon City Guides** is a web app for LeWagon bootcamp students to share their favourite spots in their LeWagon city. I implemented the dark mode toggle among other minor improvements for this open source project.
+_Wagon City Guides_ is a web app for LeWagon bootcamp students to share their favourite spots in their LeWagon city. I implemented the dark mode toggle among other minor improvements for this open source project.
