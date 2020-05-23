@@ -23,7 +23,7 @@ const CardStyled = styled.div`
     margin-right: 10px;
     font-size: 26px;
     color: ${({ theme }) => theme.text};
-    transition: 1s ease;
+    transition: 0.5s ease;
   }
   
   .icon:hover {

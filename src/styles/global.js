@@ -56,4 +56,11 @@ export const GlobalStyles = createGlobalStyle`
   .feedback {
     color: ${({ theme }) => theme.textOriginal};
   }
+
+  .hover-link {
+    &:hover {
+      color: ${({ theme }) => theme.linkHoverColor};
+      transition: 0.2s ease;
+    }
+  }
 `

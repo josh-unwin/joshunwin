@@ -67,11 +67,12 @@ const ProjectsCard = () => {
         edges {
           node {
             id
-            excerpt(pruneLength: 250)
+            html
             frontmatter {
               date(formatString: "MMMM DD, YYYY")
               title
               technologies
+              contribution
               url
               repo
               image {
@@ -114,17 +115,16 @@ const ProjectsCard = () => {
                   </a>
                   <div className="flex w-full my-2">
                     <span className="flex-grow text-center">
-                      <a className="cursor-pointer capitalize" href={project.node.frontmatter.url} target="_blank"><FaExternalLinkAlt className="inline mb-1" /> View project</a>
+                      <a className="cursor-pointer hover-link" href={project.node.frontmatter.url} target="_blank"><FaExternalLinkAlt className="inline mb-1" /> View project</a>
                     </span>
                     <span className="flex-grow text-center">
-                      <a className="cursor-pointer capitalize" href={project.node.frontmatter.repo} target="_blank"><FaGithub className="inline mb-1" /> Git repo</a>
+                      <a className="cursor-pointer hover-link" href={project.node.frontmatter.repo} target="_blank"><FaGithub className="inline mb-1" /> Git repo</a>
                     </span>
                   </div>
                   <hr />
+                  <p><span className="text-blue-500">Contribution: </span>{project.node.frontmatter?.contribution}</p>
                   <p><span className="text-blue-500">Key Technologies: </span>{project.node.frontmatter?.technologies?.join(", ")}</p>
-                  <div className="text-sm" dangerouslySetInnerHTML={{ __html: project.node.excerpt }} />
-
-                </div>
+                  <div className="text-sm" dangerouslySetInnerHTML={{ __html: project.node.html }} /></div>
               )
             })}
           </div>
