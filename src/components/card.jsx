@@ -153,7 +153,6 @@ const Card = (props) => {
           <p><FaReact className='skills-icon' /> React | <FaJsSquare className='skills-icon' /> JS | <FaGem className='skills-icon' /> Rails | <FaPython className='skills-icon' /> Python</p>
           <div className="links">
             <Button text="Say hi &nbsp;&#128075" link="/contact" flipCard={flipCard} />
-            <a href="https://coda.io/@josh-unwin/blog" target="_blank" className="icon"><FaRss style={{fontSize: '26px'}} /></a>
             <a href="http://www.github.com/josh-unwin" target="_blank" className="icon"><FontAwesomeIcon icon={['fab', 'github']} style={{fontSize: '26px'}} /></a>
             <a href="https://www.linkedin.com/in/josh-unwin-a4735637/" target="_blank" className="icon"><FontAwesomeIcon icon={['fab', 'linkedin']} style={{fontSize: '26px'}} /></a>
             <a href="https://keybase.io/joshunwin/" target="_blank" className="icon"><FontAwesomeIcon icon={['fab', 'keybase']} style={{fontSize: '26px'}} /></a>

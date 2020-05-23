@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { FaArrowLeft } from 'react-icons/fa'
+import BackButton from '../components/backButton'
 import { FaCheck } from 'react-icons/fa'
 import axios from "axios"
 import * as qs from "query-string"
@@ -52,14 +52,6 @@ const Form = styled.div`
 
   .input, .textarea {
     font-weight: 400;
-  }
-
-  .back-arrow {
-    cursor: pointer;
-    position: absolute;
-    top: 5px;
-    left: 12px;
-    color: ${({ theme }) => theme.text};
   }
 
   .message-field {
@@ -116,7 +108,7 @@ const ContactForm = (props) => {
     default:
       return(
       <Form>
-        <FaArrowLeft onClick={flipBack} className='back-arrow' />
+        <BackButton action={flipBack} />
         <h2>Get in touch below!</h2>
         {messageFeedback && 
         <span className={messageStatus === 'sent' ? 'feedback sent' : 'feedback error'}
@@ -147,7 +139,7 @@ const ContactForm = (props) => {
     case 'sent':
       return (
         <Form>
-          <FaArrowLeft onClick={flipBack} className='back-arrow' />
+          <BackButton action={flipBack} />
           <span style={{fontSize: '4em', color: '#00D1B2'}}><FaCheck /></span>
           <h2>I've got it!</h2>
           <p style={{textAlign: 'center'}}>

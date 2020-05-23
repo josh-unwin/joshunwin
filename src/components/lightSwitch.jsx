@@ -5,7 +5,7 @@ import { FaAdjust } from 'react-icons/fa'
 const LightSwitchStyled = styled.div`
   position: absolute;
   top: 15px;
-  left: 15px;
+  right: 15px;
   font-size: 35px;
   cursor: pointer;
   z-index: 1;

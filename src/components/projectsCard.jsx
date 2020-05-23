@@ -1,9 +1,10 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from 'styled-components'
 import device from '../functions/device'
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
+import BackButton from '../components/backButton'
 
 const ProjectsCardStyled = styled.div`
   position: absolute;
@@ -60,7 +61,7 @@ const ProjectsCardStyled = styled.div`
   }
 `
 
-const ProjectsCard = () => {
+const ProjectsCard = (props) => {
   const projectsData = useStaticQuery(graphql`
     query {
       allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
@@ -91,17 +92,11 @@ const ProjectsCard = () => {
 
   const projects = projectsData.allMarkdownRemark.edges;
 
-  function expandCard() {
-    const projectsCardDiv = document.querySelector(".projects-card");
-    projectsCardDiv.classList.toggle("expanded-card")
-  }
-
-  console.log(projects);
-
   return (
-    <ProjectsCardStyled onClick={expandCard}>
-      <div className="projects-card px-3 sm:px-24">
+    <ProjectsCardStyled>
+      <div className={`projects-card py-4 px-3 sm:px-24 ${props.isProjectsOpen ? "expanded-card" : ""}`}>
         <div className="projects-card-content">
+          <BackButton action={() => {props.setIsProjectsOpen(false)}} />
           <h2 className="text-3xl my-8">Coding Projects</h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 pb-8">
             {projects.map(project => {
