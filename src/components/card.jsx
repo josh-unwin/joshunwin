@@ -145,7 +145,7 @@ const Card = (props) => {
         </div>
         <div className="card-column card-right">
           <h1>josh unwin</h1>
-          <h3>FULL STACK DEVELOPER</h3>
+          <h3>FRONT END DEVELOPER</h3>
           <p>Making stuff for things.</p>
 
           <p><FaReact className='skills-icon' /> React | <FaJsSquare className='skills-icon' /> JS | <FaGem className='skills-icon' /> Rails | <FaPython className='skills-icon' /> Python</p>

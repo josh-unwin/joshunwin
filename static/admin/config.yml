@@ -19,13 +19,14 @@ collections:
     - {label: "Date", name: "date", widget: "datetime"}
     - {label: "Image", name: "image", widget: "image"}
     - {label: "Body", name: "body", widget: "markdown"}
-    - {label: "Contribution",
-        name: "contribution",
-        widget: "select",
-        options: ["Sole developer", "Key developer", "Small contribution to open source"]
     - {label: "Technologies",
        name: "technologies",
        widget: "select",
        multiple: true,
        options: ["React", "Javascript", "Gatsby", "NextJS", "SQL", "Rails", "Ruby"]
       }
+    - {label: "Contribution",
+     name: "contribution",
+     widget: "select",
+     options: ["Sole developer", "Key developer", "Small contribution to open source"]
+    }

@@ -1,7 +1,7 @@
 ---
 title: Spotlight
-url: http://canborneo.id
-repo: https://github.com/josh-unwin/canborneo
+url: https://spotlight-josh.herokuapp.com/
+repo: https://github.com/josh-unwin/Spotlight
 date: 2019-05-04
 image: ../project-images/spotlight-preview.png
 contribution: "Key developer"

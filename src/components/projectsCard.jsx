@@ -63,7 +63,7 @@ const ProjectsCardStyled = styled.div`
 const ProjectsCard = (props) => {
   const projectsData = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___date] }) {
         edges {
           node {
             id
