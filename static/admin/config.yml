@@ -6,8 +6,8 @@ backend:
 media_folder: "src/project-images"
 
 collections:
-- name: "code-projects" # Used in routes, e.g., /admin/collections/blog
-  label: "Code Projects" # Used in the UI
+- name: "projects" # Used in routes, e.g., /admin/collections/blog
+  label: "Project" # Used in the UI
   folder: "src/projects-markdown" # The path to the folder where the documents are stored
   create: true # Allow users to create new documents in this collection
   slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -18,8 +18,8 @@ collections:
     - {label: "Date", name: "date", widget: "datetime"}
     - {label: "Image", name: "image", widget: "image"}
     - {label: "Body", name: "body", widget: "markdown"}
-    - {label: "Tags",
-       name: "tags",
+    - {label: "Technologies",
+       name: "technologies",
        widget: "select",
        multiple: true,
        options: ["React", "Javascript", "Gatsby", "NextJS", "SQL", "Rails", "Ruby"]
