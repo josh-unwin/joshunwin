@@ -5,7 +5,7 @@ repo: https://github.com/josh-unwin/canborneo
 date: 2019-05-04
 image: ../project-images/canborneo.png
 technologies:
-  - React
+  - "React"
   - Javascript
   - Gatsby
 ---

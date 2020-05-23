@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import device from '../functions/device'
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { FaGithub } from 'react-icons/fa'
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 
 const ProjectsCardStyled = styled.div`
   position: absolute;
@@ -101,26 +101,28 @@ const ProjectsCard = () => {
     <ProjectsCardStyled onClick={expandCard}>
       <div className="projects-card px-3 sm:px-24">
         <div className="projects-card-content">
-          <h2 className="text-2xl my-8">Coding Projects</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
+          <h2 className="text-3xl my-8">Coding Projects</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 pb-8">
             {projects.map(project => {
               return (
                 <div className="">
-                  <span className="text-xl tracking-wide">{project.node.frontmatter.title}</span>
-                  <div className="w-full h-56 object-cover">
-                    <Img style={{width: '100%', height: '100%'}} imgStyle={{ objectFit: 'cover' }} fluid={project.node.frontmatter.image.childImageSharp.fluid} />
-                  </div>
+                  <span className="text-xl text-bold tracking-wide">{project.node.frontmatter.title}</span>
+                  <a href={project.node.frontmatter.url} target="_blank">
+                    <div className="w-full h-56 object-cover">
+                      <Img style={{width: '100%', height: '100%'}} imgStyle={{ objectFit: 'cover' }} fluid={project.node.frontmatter.image.childImageSharp.fluid} />
+                    </div>
+                  </a>
                   <div className="flex w-full my-2">
                     <span className="flex-grow text-center">
-                      <a className="cursor-pointer capitalize" href={project.node.frontmatter.url} target="_blank">View project</a>
+                      <a className="cursor-pointer capitalize" href={project.node.frontmatter.url} target="_blank"><FaExternalLinkAlt className="inline mb-1" /> View project</a>
                     </span>
                     <span className="flex-grow text-center">
-                      <a className="cursor-pointer capitalize" href={project.node.frontmatter.repo} target="_blank"><FaGithub className="inline" /> Git repo</a>
+                      <a className="cursor-pointer capitalize" href={project.node.frontmatter.repo} target="_blank"><FaGithub className="inline mb-1" /> Git repo</a>
                     </span>
                   </div>
                   <hr />
-                  <p className="text-blue-500">{project.node.frontmatter?.technologies?.join(", ")}</p>
-                  <div dangerouslySetInnerHTML={{ __html: project.node.excerpt }} />
+                  <p><span className="text-blue-500">Key Technologies: </span>{project.node.frontmatter?.technologies?.join(", ")}</p>
+                  <div className="text-sm" dangerouslySetInnerHTML={{ __html: project.node.excerpt }} />
 
                 </div>
               )

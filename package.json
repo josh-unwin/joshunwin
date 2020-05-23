@@ -2,7 +2,7 @@
   "name": "joshunwin",
   "private": true,
   "description": "A personal website for joshunwin.com",
-  "version": "0.5.0",
+  "version": "1.0",
   "author": "Josh Unwin <joshunwin@gmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
