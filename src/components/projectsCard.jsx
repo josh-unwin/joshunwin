@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import device from '../functions/device'
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { FaGithub } from 'react-icons/fa'
 
 const ProjectsCardStyled = styled.div`
   position: absolute;
@@ -92,14 +93,12 @@ const ProjectsCard = () => {
     projectsCardDiv.classList.toggle("expanded-card")
   }
 
-  console.log(projects);
-
   return (
     <ProjectsCardStyled onClick={expandCard}>
       <div className="projects-card px-3 sm:px-24">
         <div className="projects-card-content">
           <h2 className="text-2xl my-8">Coding Projects</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
             {projects.map(project => {
               return (
                 <div className="">
@@ -107,6 +106,11 @@ const ProjectsCard = () => {
                   <div className="w-full h-48 object-cover">
                     <Img style={{width: '100%', height: '100%'}} imgStyle={{ objectFit: 'cover' }} fluid={project.node.frontmatter.image.childImageSharp.fluid} />
                   </div>
+                  <div className="flex w-full my-2">
+                    <a className="cursor-pointer flex-grow text-center capitalize" href={project.node.frontmatter.url}><FaGithub className="inline" /> View project</a>
+                    <a className="cursor-pointer flex-grow text-center capitalize" href={project.node.frontmatter.repo}>Git repo</a>
+                  </div>
+                  <hr />
                   <p className="text-blue-500">{project.node.frontmatter?.technologies?.join(", ")}</p>
                   <div dangerouslySetInnerHTML={{ __html: project.node.excerpt }} />
 
