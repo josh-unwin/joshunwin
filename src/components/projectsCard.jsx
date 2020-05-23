@@ -72,6 +72,8 @@ const ProjectsCard = () => {
               date(formatString: "MMMM DD, YYYY")
               title
               technologies
+              url
+              repo
               image {
                 childImageSharp {
                   fluid(maxWidth: 350) {
@@ -93,6 +95,8 @@ const ProjectsCard = () => {
     projectsCardDiv.classList.toggle("expanded-card")
   }
 
+  console.log(projects);
+
   return (
     <ProjectsCardStyled onClick={expandCard}>
       <div className="projects-card px-3 sm:px-24">
@@ -103,12 +107,16 @@ const ProjectsCard = () => {
               return (
                 <div className="">
                   <span className="text-xl tracking-wide">{project.node.frontmatter.title}</span>
-                  <div className="w-full h-48 object-cover">
+                  <div className="w-full h-56 object-cover">
                     <Img style={{width: '100%', height: '100%'}} imgStyle={{ objectFit: 'cover' }} fluid={project.node.frontmatter.image.childImageSharp.fluid} />
                   </div>
                   <div className="flex w-full my-2">
-                    <a className="cursor-pointer flex-grow text-center capitalize" href={project.node.frontmatter.url}><FaGithub className="inline" /> View project</a>
-                    <a className="cursor-pointer flex-grow text-center capitalize" href={project.node.frontmatter.repo}>Git repo</a>
+                    <span className="flex-grow text-center">
+                      <a className="cursor-pointer capitalize" href={project.node.frontmatter.url} target="_blank">View project</a>
+                    </span>
+                    <span className="flex-grow text-center">
+                      <a className="cursor-pointer capitalize" href={project.node.frontmatter.repo} target="_blank"><FaGithub className="inline" /> Git repo</a>
+                    </span>
                   </div>
                   <hr />
                   <p className="text-blue-500">{project.node.frontmatter?.technologies?.join(", ")}</p>
