@@ -101,7 +101,7 @@ const ProjectsCard = (props) => {
           <BackButton action={() => {props.setIsProjectsOpen(false)}} />
           <div className="my-8">
             <h2 className="text-3xl">Coding Projects</h2>
-            <p>Looking for a CV? Please don't hesitate to get in touch (via the "Say Hi" button or otherwise).</p>
+            <p>Looking for a full CV? Please don't hesitate to get in touch via the "Say Hi" button, LinkedIn or otherwise.</p>
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 pb-8">
             {projects.map(project => {

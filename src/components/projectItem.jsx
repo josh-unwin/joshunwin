@@ -16,14 +16,14 @@ const ProjectItem = (props) => {
           {props.project.frontmatter.url ? 
             <a className="cursor-pointer hover-link" href={props.project.frontmatter.url} target="_blank"><FaExternalLinkAlt className="inline mb-1" /> View project</a>
             :
-            <span><FaExternalLinkAlt className="inline mb-1" /> Work in progress</span>
+            <span className="text-gray-500 cursor-not-allowed"><FaExternalLinkAlt className="inline mb-1" /> Work in progress</span>
           }
         </span>
         <span className="flex-grow text-center">
           {props.project.frontmatter.repo ?
             <a className="cursor-pointer hover-link" href={props.project.frontmatter.repo} target="_blank"><FaGithub className="inline mb-1" /> Git repo</a>
             :
-            <span><FaGithub className="inline mb-1" /> Coming soon</span>
+            <span className="text-gray-500 cursor-not-allowed"><FaGithub className="inline mb-1" /> Coming soon</span>
           }
         </span>
       </div>
