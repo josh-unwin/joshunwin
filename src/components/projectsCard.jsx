@@ -96,7 +96,10 @@ const ProjectsCard = (props) => {
       <div className={`projects-card py-4 px-3 sm:px-24 ${props.isProjectsOpen ? "expanded-card" : ""}`}>
         <div className="projects-card-content">
           <BackButton action={() => {props.setIsProjectsOpen(false)}} />
-          <h2 className="text-3xl my-8">Coding Projects</h2>
+          <div className="my-8">
+            <h2 className="text-3xl">Coding Projects</h2>
+            <p>Looking for a CV? Please don't hesitate to get in touch (via the "Say Hi" button or otherwise).</p>
+          </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 pb-8">
             {projects.map(project => {
               return (
