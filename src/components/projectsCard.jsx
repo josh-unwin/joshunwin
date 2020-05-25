@@ -33,10 +33,13 @@ const ProjectsCardStyled = styled.div`
     z-index: 2;
     overflow: scroll;
 
+    ::-webkit-scrollbar { 
+        display: none;
+    }
+
     &:hover {
         box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
     }
-  
     
     @media ${device.mobileS} {
       width: 300px;
