@@ -5,6 +5,7 @@ backend:
 
 media_folder: "src/project-images"
 public_folder: "../project-images"
+site_url: https://www.joshunwin.com
 
 collections:
 - name: "projects"
@@ -18,7 +19,6 @@ collections:
     - {label: "Repo URL", name: "repo", widget: "string", required: false}
     - {label: "Date", name: "date", widget: "datetime"}
     - {label: "Image", name: "image", widget: "image"}
-    - {label: "Body", name: "body", widget: "markdown"}
     - {label: "Technologies",
        name: "technologies",
        widget: "select",
@@ -30,3 +30,4 @@ collections:
      widget: "select",
      options: ["Sole developer", "Key developer", "Small contribution to open source"]
     }
+    - {label: "Body", name: "body", widget: "markdown"}
