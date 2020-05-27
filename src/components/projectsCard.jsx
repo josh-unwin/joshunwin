@@ -31,6 +31,7 @@ const ProjectsCardStyled = styled.div`
     transform: translate(0, 0) rotate(3deg); 
     z-index: 2;
     overflow: scroll;
+    scrollbar-width: none;
 
     ::-webkit-scrollbar { 
         display: none;

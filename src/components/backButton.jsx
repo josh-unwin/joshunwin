@@ -9,7 +9,6 @@ const BackButtonDiv = styled.div`
     position: absolute;
     top: 10px;
     left: 12px;
-    color: ${({ theme }) => theme.text};
   }
 `
 

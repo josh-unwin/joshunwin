@@ -1,5 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
+// NOTE: Any time you want to use theme colors, the css must be included here in the global file. Using theme colors in styled-components
+// doesn't load them correctly on initial page load once the project has been built.
+
 export const GlobalStyles = createGlobalStyle`
   *,
   *::after,
@@ -74,5 +77,9 @@ export const GlobalStyles = createGlobalStyle`
 
   .form-input-field {
     color: ${({ theme }) => theme.textOriginal};
+  }
+
+  .back-button {
+    color: ${({ theme }) => theme.text};
   }
 `
