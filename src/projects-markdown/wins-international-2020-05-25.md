@@ -7,6 +7,6 @@ technologies:
   - NextJS
   - React
   - SQL
-contribution: Sole developer
+contribution: 1-Lead developer
 ---
 An E-Commerce site for Wins International, a British classic car spares specialist. Not yet ready for launch.

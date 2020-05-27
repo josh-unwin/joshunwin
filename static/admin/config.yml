@@ -28,6 +28,6 @@ collections:
     - {label: "Contribution",
      name: "contribution",
      widget: "select",
-     options: ["Sole developer", "Key developer", "Small contribution to open source"]
+     options: ["1-Lead developer", "2-Key developer", "3-Small contribution to open source"]
     }
     - {label: "Body", name: "body", widget: "markdown"}

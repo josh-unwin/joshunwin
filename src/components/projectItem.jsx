@@ -28,7 +28,7 @@ const ProjectItem = (props) => {
         </span>
       </div>
       <hr className="border-gray-500 opacity-50" />
-      <p><span className="text-blue-500">Contribution: </span>{props.project.frontmatter?.contribution}</p>
+      <p><span className="text-blue-500">Contribution: </span>{props.project.frontmatter?.contribution.split("-")[1]}</p>
       <p><span className="text-blue-500">Key Technologies: </span>{props.project.frontmatter?.technologies?.join(", ")}</p>
       <div className="text-sm" dangerouslySetInnerHTML={{ __html: props.project.html }} />
     </div>

@@ -4,7 +4,7 @@ url: https://spotlight-josh.herokuapp.com/
 repo: https://github.com/josh-unwin/Spotlight
 date: 2019-05-04
 image: ../project-images/spotlight-preview.png
-contribution: "Key developer"
+contribution: "2-Key developer"
 technologies:
   - Rails
   - Javascript
