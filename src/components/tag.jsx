@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const TagStyled = styled.div`
   position: absolute;
   bottom: 70px;
-  right: -20px;
+  right: -24px;
   transform: rotate(90deg);
   font-family: 'Share Tech Mono', monospace;
 
@@ -27,7 +27,7 @@ const TagStyled = styled.div`
 `
 
 const Tag = (props) => (
-  <TagStyled> Hello World<span className="tag-block blink_me" dangerouslySetInnerHTML={{ __html: '&#9646'}}></span></TagStyled>
+  <TagStyled> Hello, World<span className="tag-block blink_me" dangerouslySetInnerHTML={{ __html: '&#9646'}}></span></TagStyled>
 )
 
 export default Tag
