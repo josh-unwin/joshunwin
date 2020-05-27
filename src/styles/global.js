@@ -33,7 +33,7 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: 200;
     font-size: 14px;
     letter-spacing: 4px;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
   }
 
   .h100 {
