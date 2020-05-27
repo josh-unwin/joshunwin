@@ -109,7 +109,7 @@ const ContactForm = (props) => {
       <FormDiv>
         <div className="form-contents">
         <BackButton action={flipBack} />
-          <h2>Get in touch below!</h2>
+          <h2>Get in touch :)</h2>
           {messageFeedback && 
           <span className={messageStatus === 'sent' ? 'feedback sent' : 'feedback error'}
                 style={{width:'90%'}}>

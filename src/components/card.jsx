@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import ProfileImage from "./profileImage"
 import Button from "./button"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { FaReact, FaJsSquare, FaGem, FaRss, FaPython } from 'react-icons/fa'
+import { FaReact, FaJsSquare, FaGem, FaGithub, FaLinkedin, FaKeybase, FaPython } from 'react-icons/fa'
 import device from '../functions/device'
 import ContactForm from './contactForm'
 
@@ -20,7 +20,7 @@ const CardStyled = styled.div`
   }
 
   .social-icon {
-    margin-right: 10px;
+    margin-right: 8px;
     transition: 0.5s ease;
   }
   
@@ -147,11 +147,9 @@ const Card = (props) => {
           <p><FaReact className='skills-icon' /> React | <FaJsSquare className='skills-icon' /> JS | <FaGem className='skills-icon' /> Rails | <FaPython className='skills-icon' /> Python</p>
           <div className="links">
             <Button text="Say hi &nbsp;&#128075" link="/contact" flipCard={flipCard} />
-            <div className="text-3xl -mb-1">
-              <a href="http://www.github.com/josh-unwin" target="_blank" className="social-icon"><FontAwesomeIcon icon={['fab', 'github']} /></a>
-              <a href="https://www.linkedin.com/in/josh-unwin-a4735637/" target="_blank" className="social-icon"><FontAwesomeIcon icon={['fab', 'linkedin']} /></a>
-              <a href="https://keybase.io/joshunwin/" target="_blank" className="social-icon"><FontAwesomeIcon icon={['fab', 'keybase']} /></a>
-            </div>
+            <a href="http://www.github.com/josh-unwin" target="_blank"><FaGithub className="social-icon text-3xl" /></a>
+            <a href="https://www.linkedin.com/in/josh-unwin-a4735637/" target="_blank"><FaLinkedin className="social-icon text-3xl" /></a>
+            <a href="https://keybase.io/joshunwin/" target="_blank"><FaKeybase className="social-icon text-3xl" /></a>
           </div>
         </div>
       </div>
