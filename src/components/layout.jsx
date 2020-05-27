@@ -17,7 +17,7 @@ const Container = styled.div`
   margin: 0;
 
   main {
-    height: 100%
+    height: 100%;
   }
 `
 

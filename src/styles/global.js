@@ -71,10 +71,6 @@ export const GlobalStyles = createGlobalStyle`
     background-color: ${({ theme }) => theme.cardBkg};
   }
 
-  .social-icon {
-    font-size: 26px;
-  }
-
   .form-input-field {
     color: ${({ theme }) => theme.textOriginal};
   }

@@ -147,9 +147,11 @@ const Card = (props) => {
           <p><FaReact className='skills-icon' /> React | <FaJsSquare className='skills-icon' /> JS | <FaGem className='skills-icon' /> Rails | <FaPython className='skills-icon' /> Python</p>
           <div className="links">
             <Button text="Say hi &nbsp;&#128075" link="/contact" flipCard={flipCard} />
-            <a href="http://www.github.com/josh-unwin" target="_blank" className="social-icon"><FontAwesomeIcon icon={['fab', 'github']} /></a>
-            <a href="https://www.linkedin.com/in/josh-unwin-a4735637/" target="_blank" className="social-icon"><FontAwesomeIcon icon={['fab', 'linkedin']} /></a>
-            <a href="https://keybase.io/joshunwin/" target="_blank" className="social-icon"><FontAwesomeIcon icon={['fab', 'keybase']} /></a>
+            <div className="text-3xl -mb-1">
+              <a href="http://www.github.com/josh-unwin" target="_blank" className="social-icon"><FontAwesomeIcon icon={['fab', 'github']} /></a>
+              <a href="https://www.linkedin.com/in/josh-unwin-a4735637/" target="_blank" className="social-icon"><FontAwesomeIcon icon={['fab', 'linkedin']} /></a>
+              <a href="https://keybase.io/joshunwin/" target="_blank" className="social-icon"><FontAwesomeIcon icon={['fab', 'keybase']} /></a>
+            </div>
           </div>
         </div>
       </div>
