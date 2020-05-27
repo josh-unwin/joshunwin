@@ -1,5 +1,5 @@
 // theme.js
-export const lightTheme = {
+export const colorTheme = {
   bkgColor1: '#FF9D7A',
   bkgColor2: '#70D6FF',
   cardBkg: 'white',
@@ -21,4 +21,16 @@ export const darkTheme = {
   textOriginal: '#363537',
   toggleBorder: '#6B8096',
   gradient: 'linear-gradient(#091236, #1E215D)',
+}
+
+export const lightTheme = {
+  bkgColor1: '#dddddd',
+  bkgColor2: '#c9c9c9',
+  cardBkg: 'white',
+  body: '#E2E2E2',
+  textOriginal: '#363537',
+  text: '#363537',
+  linkHoverColor: '#6dc7eb',
+  toggleBorder: '#FFF',
+  gradient: 'linear-gradient(#39598A, #79D7ED)',
 }

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from 'styled-components'
-import { FaAdjust } from 'react-icons/fa'
+import { FaAdjust, FaPalette, FaSun, FaMoon } from 'react-icons/fa'
 
 const LightSwitchStyled = styled.div`
   position: absolute;
@@ -12,12 +12,20 @@ const LightSwitchStyled = styled.div`
 `
 
 const LightSwitch = (props) => {
-  function handleClick() {
-    props.setSelectedTheme(props.selectedTheme === 'light' ? 'dark' : 'light')
+  function handleClick(themeSelection) {
+    props.setSelectedTheme(themeSelection)
+    console.log(themeSelection);
   }
 
   return (
-    <LightSwitchStyled className="hover-link"><FaAdjust  onClick={handleClick}/></LightSwitchStyled>
+    <LightSwitchStyled>
+      <FaAdjust className="hover-link"/>
+      <div className="flex flex-col items-center">
+        <FaSun className="hover-link text-2xl mt-2" onClick={() => {handleClick("light")}}/>
+        <FaMoon className="hover-link text-2xl mt-2" onClick={() => {handleClick("dark")}}/>
+        <FaPalette className="hover-link text-2xl mt-2" onClick={() => {handleClick("color")}}/>
+      </div>
+    </LightSwitchStyled>
   )
 }
 
