@@ -14,7 +14,6 @@ const LightSwitchStyled = styled.div`
 const LightSwitch = (props) => {
   function handleClick(themeSelection) {
     props.setSelectedTheme(themeSelection)
-    console.log(themeSelection);
   }
 
   return (

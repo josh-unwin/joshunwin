@@ -10,9 +10,8 @@ import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme, colorTheme } from '../styles/theme';
 import { GlobalStyles } from '../styles/global';
 import LightSwitch from "./lightSwitch"
-import { useEffect } from 'react'
-
-
+import { useLocation } from '@reach/router';
+import queryString from 'query-string';
 
 const Container = styled.div`
   margin: 0;
@@ -25,13 +24,23 @@ const Container = styled.div`
 const Layout = ({ children }) => {
   library.add(fab, faEnvelope);
 
+  const urlQueries = queryString.parse(useLocation().search);
   const themes = ["light", "dark", "color"];
   const themesMap = {
     "light": lightTheme,
     "dark": darkTheme,
     "color": colorTheme
   };
-  const [selectedTheme, setSelectedTheme] = useState(themes[Math.floor(Math.random() * themes.length)]);
+
+  let initialTheme;
+
+  if (urlQueries.theme) {
+    initialTheme = urlQueries.theme
+  } else {
+    initialTheme = themes[Math.floor(Math.random() * themes.length)]
+  }
+
+  const [selectedTheme, setSelectedTheme] = useState(initialTheme);
   
   return (
     <ThemeProvider theme={themesMap[selectedTheme]}>

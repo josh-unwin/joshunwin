@@ -104,10 +104,10 @@ const ProjectsCard = (props) => {
             <p>Looking for a full CV? Please don't hesitate to get in touch via the "Say Hi" button, LinkedIn or otherwise.</p>
             <hr />
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 row-gap-12 col-gap-8 pb-8">
-            {projects.map(project => {
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 row-gap-12 col-gap-8 pb-8">
+            {projects.map((project, index) => {
               return (
-                <ProjectItem project={project.node} />
+                <ProjectItem project={project.node} key={index} />
               )
             })}
           </div>

@@ -21,7 +21,6 @@ const CardStyled = styled.div`
 
   .icon {
     margin-right: 10px;
-    font-size: 26px;
     color: ${({ theme }) => theme.text};
     transition: 0.5s ease;
   }
