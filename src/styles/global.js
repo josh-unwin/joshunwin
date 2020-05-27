@@ -64,11 +64,15 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
-  .projects-card, .card__face--back, .card__face--front, .secondary-card-contents, .social-icon {
+  .projects-card, .card__face--back, .card__face--front, .secondary-card-contents, .social-icon, .form-contents {
     background-color: ${({ theme }) => theme.cardBkg};
   }
 
   .social-icon {
     font-size: 26px;
+  }
+
+  .form-input-field {
+    color: ${({ theme }) => theme.textOriginal};
   }
 `
