@@ -24,7 +24,7 @@ const CardStyled = styled.div`
     transition: 0.5s ease;
   }
   
-  .icon:hover {
+  .social-icon:hover {
     color: #70D6FF;
   }
 
