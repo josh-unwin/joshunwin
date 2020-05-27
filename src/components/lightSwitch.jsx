@@ -18,13 +18,13 @@ const LightSwitch = (props) => {
   }
 
   return (
-    <LightSwitchStyled>
-      <FaAdjust className="hover-link"/>
-      <div className="flex flex-col items-center">
-        <FaSun className="hover-link text-2xl mt-2" onClick={() => {handleClick("light")}}/>
-        <FaMoon className="hover-link text-2xl mt-2" onClick={() => {handleClick("dark")}}/>
-        <FaPalette className="hover-link text-2xl mt-2" onClick={() => {handleClick("color")}}/>
-      </div>
+    <LightSwitchStyled className="group">
+        <FaAdjust className="hover-link"/>
+        <div className="flex-col items-center hidden group-hover:flex">
+          <FaSun className="hover-link text-2xl mt-3" onClick={() => {handleClick("light")}}/>
+          <FaMoon className="hover-link text-2xl mt-3" onClick={() => {handleClick("dark")}}/>
+          <FaPalette className="hover-link text-2xl mt-3" onClick={() => {handleClick("color")}}/>
+        </div>
     </LightSwitchStyled>
   )
 }
