@@ -31,8 +31,8 @@ const IndexPage = (props) => {
               setBackgroundSelection={setBackgroundSelection} 
               backgroundSelection={backgroundSelection}
               flipped={isPrimaryCardFlipped} setFlipped={setIsPrimaryCardFlipped} />
-          <ProjectsCard isProjectsOpen={isProjectsOpen} setIsProjectsOpen={setIsProjectsOpen} style={{position: 'absolute'}} position2 />
-          <SecondaryCard style={{position: 'absolute'}} position3 />
+          <ProjectsCard isProjectsOpen={isProjectsOpen} setIsProjectsOpen={setIsProjectsOpen} style={{position: 'absolute'}} />
+          <SecondaryCard style={{position: 'absolute'}} />
           <ButtonsContainer isProjectsOpen={isProjectsOpen} setIsProjectsOpen={setIsProjectsOpen} isPrimaryCardFlipped={isPrimaryCardFlipped}/>
         <Tag />
       </Home>

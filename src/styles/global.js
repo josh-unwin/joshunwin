@@ -63,4 +63,12 @@ export const GlobalStyles = createGlobalStyle`
       transition: 0.2s ease;
     }
   }
+
+  .projects-card, .card__face--back, .card__face--front, .secondary-card-contents, .social-icon {
+    background-color: ${({ theme }) => theme.cardBkg};
+  }
+
+  .social-icon {
+    font-size: 26px;
+  }
 `

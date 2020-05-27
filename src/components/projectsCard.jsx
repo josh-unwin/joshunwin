@@ -21,7 +21,6 @@ const ProjectsCardStyled = styled.div`
     position: absolute;
     width: 520px;
     height: 300px;
-    background-color: ${({ theme }) => theme.cardBkg};
     margin: 0 auto;
     display: flex;
     flex-direction: row;

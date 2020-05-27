@@ -19,9 +19,8 @@ const CardStyled = styled.div`
     flex-direction: column;
   }
 
-  .icon {
+  .social-icon {
     margin-right: 10px;
-    color: ${({ theme }) => theme.text};
     transition: 0.5s ease;
   }
   
@@ -113,13 +112,11 @@ const CardStyled = styled.div`
   .card__face--front {
     display: flex;
     justify-content: center;
-    background-color: ${({ theme }) => theme.cardBkg};
   }
   
   .card__face--back {
     transform: rotateY( 180deg );
     padding: 10px 0;
-    background-color: ${({ theme }) => theme.cardBkg};
   }
 
   .skills-icon {
@@ -150,9 +147,9 @@ const Card = (props) => {
           <p><FaReact className='skills-icon' /> React | <FaJsSquare className='skills-icon' /> JS | <FaGem className='skills-icon' /> Rails | <FaPython className='skills-icon' /> Python</p>
           <div className="links">
             <Button text="Say hi &nbsp;&#128075" link="/contact" flipCard={flipCard} />
-            <a href="http://www.github.com/josh-unwin" target="_blank" className="icon"><FontAwesomeIcon icon={['fab', 'github']} style={{fontSize: '26px'}} /></a>
-            <a href="https://www.linkedin.com/in/josh-unwin-a4735637/" target="_blank" className="icon"><FontAwesomeIcon icon={['fab', 'linkedin']} style={{fontSize: '26px'}} /></a>
-            <a href="https://keybase.io/joshunwin/" target="_blank" className="icon"><FontAwesomeIcon icon={['fab', 'keybase']} style={{fontSize: '26px'}} /></a>
+            <a href="http://www.github.com/josh-unwin" target="_blank" className="social-icon"><FontAwesomeIcon icon={['fab', 'github']} /></a>
+            <a href="https://www.linkedin.com/in/josh-unwin-a4735637/" target="_blank" className="social-icon"><FontAwesomeIcon icon={['fab', 'linkedin']} /></a>
+            <a href="https://keybase.io/joshunwin/" target="_blank" className="social-icon"><FontAwesomeIcon icon={['fab', 'keybase']} /></a>
           </div>
         </div>
       </div>
