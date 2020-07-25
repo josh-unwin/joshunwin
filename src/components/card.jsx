@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FaReact, FaJsSquare, FaGem, FaGithub, FaLinkedin, FaKeybase, FaPython } from 'react-icons/fa'
 import device from '../functions/device'
 import ContactForm from './contactForm'
+import ClapperboardIcon from './clapperboardIcon'
+import TreeIcon from './treeIcon'
 
 const CardStyled = styled.div`
   position: absolute;
@@ -142,7 +144,20 @@ const Card = (props) => {
         <div className="card-column card-right">
           <h1>josh unwin</h1>
           <h3>FRONT END DEVELOPER</h3>
-          <p className="sm:text-left text-centered">Making stuff for things.<br/>Background in film workflow.</p>
+          <ul>
+            <li className="flex flex-row items-center">
+              <TreeIcon />
+              <p className="ml-1 sm:text-left text-centered tracking-wide">
+              Green revolution advocate
+              </p>
+            </li>
+            <li className="flex flex-row items-center">
+              <ClapperboardIcon /> 
+              <p className="ml-1 sm:text-left text-centered tracking-wide">
+              Background in film workflow
+              </p>
+            </li>
+          </ul>
 
           <p><FaReact className='skills-icon' /> React | <FaJsSquare className='skills-icon' /> JS | <FaGem className='skills-icon' /> Rails | <FaPython className='skills-icon' /> Python</p>
           <div className="links">
