@@ -9,7 +9,7 @@ site_url: https://www.joshunwin.com
 
 collections:
 - name: "projects"
-  label: "Project"
+  label: "Projects"
   folder: "src/projects-markdown"
   create: true
   slug: "{{slug}}-{{year}}-{{month}}-{{day}}"
@@ -30,4 +30,21 @@ collections:
      widget: "select",
      options: ["1-Lead developer", "2-Key developer", "3-Small contribution to open source"]
     }
+    - {label: "Body", name: "body", widget: "markdown"}
+
+- name: "blog"
+  label: "Blog"
+  folder: "src/blog"
+  create: true
+  path: "{{slug}}-{{year}}-{{month}}-{{day}}"
+  fields: # The fields for each document, usually in front matter
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Date", name: "date", widget: "datetime"}
+    - {label: "Image", name: "image", widget: "image"}
+    - {label: "Categories",
+       name: "categories",
+       widget: "select",
+       multiple: true,
+       options: ["Climate", "Environment", "Tech"]
+      }
     - {label: "Body", name: "body", widget: "markdown"}

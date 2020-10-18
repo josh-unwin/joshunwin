@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import styled from 'styled-components'
 import device from '../functions/device'
 import { useStaticQuery, graphql } from "gatsby"
@@ -67,7 +67,10 @@ const ProjectsCardStyled = styled.div`
 const ProjectsCard = (props) => {
   const projectsData = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(sort: {fields: frontmatter___contribution}) {
+      allMarkdownRemark(
+        sort: {fields: frontmatter___contribution},
+        filter: {fileAbsolutePath: {regex: "/(projects-markdown)/.*.md$/"}}
+        ) {
         edges {
           node {
             id

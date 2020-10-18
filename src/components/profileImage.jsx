@@ -13,11 +13,16 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const ProfileImage = () => {
+const ProfileImage = ({size}) => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "profile-photo.png" }) {
-        childImageSharp {
+      image: file(relativePath: { eq: "profile-photo.png" }) {
+        small: childImageSharp {
+          fixed(width: 60) {
+            ...GatsbyImageSharpFixed_noBase64
+          }
+        }
+        medium: childImageSharp {
           fixed(width: 180) {
             ...GatsbyImageSharpFixed_noBase64
           }
@@ -26,7 +31,10 @@ const ProfileImage = () => {
     }
   `)
 
-  return <Img className="circular" fixed={data.placeholderImage.childImageSharp.fixed} />
+  let imageSize = data.image.medium.fixed;
+  if (size === "small") imageSize = data.image.small.fixed; 
+
+  return <Img className="circular" fixed={imageSize} />
 }
 
 export default ProfileImage

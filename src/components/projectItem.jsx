@@ -6,7 +6,7 @@ const ProjectItem = (props) => {
   return (
     <div className="">
       <span className="text-xl text-bold tracking-wide">{props.project.frontmatter.title}</span>
-      <a href={props.project.frontmatter.url} target="_blank">
+      <a href={props.project.frontmatter.url} target="_blank" rel="noreferrer">
         <div className="w-full h-56 object-cover">
           <Img style={{width: '100%', height: '100%'}} imgStyle={{ objectFit: 'cover' }} fluid={props.project.frontmatter.image.childImageSharp.fluid} />
         </div>
@@ -14,14 +14,14 @@ const ProjectItem = (props) => {
       <div className="flex w-full my-2">
         <span className="flex-grow text-center">
           {props.project.frontmatter.url ? 
-            <a className="cursor-pointer hover-link" href={props.project.frontmatter.url} target="_blank"><FaExternalLinkAlt className="inline mb-1" /> View project</a>
+            <a className="cursor-pointer hover-link" href={props.project.frontmatter.url} target="_blank" rel="noreferrer"><FaExternalLinkAlt className="inline mb-1" /> View project</a>
             :
             <span className="text-gray-500 cursor-not-allowed"><FaExternalLinkAlt className="inline mb-1" /> Work in progress</span>
           }
         </span>
         <span className="flex-grow text-center">
           {props.project.frontmatter.repo ?
-            <a className="cursor-pointer hover-link" href={props.project.frontmatter.repo} target="_blank"><FaGithub className="inline mb-1" /> Git repo</a>
+            <a className="cursor-pointer hover-link" href={props.project.frontmatter.repo} target="_blank" rel="noreferrer"><FaGithub className="inline mb-1" /> Git repo</a>
             :
             <span className="text-gray-500 cursor-not-allowed"><FaGithub className="inline mb-1" /> Coming soon</span>
           }

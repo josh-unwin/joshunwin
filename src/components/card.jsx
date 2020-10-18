@@ -1,9 +1,9 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from 'styled-components'
 import ProfileImage from "./profileImage"
 import Button from "./button"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { FaReact, FaJsSquare, FaGem, FaGithub, FaLinkedin, FaKeybase, FaPython } from 'react-icons/fa'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FaReact, FaJsSquare, FaGem, FaGithub, FaLinkedin, FaTwitter, FaPython } from 'react-icons/fa'
 import device from '../functions/device'
 import ContactForm from './contactForm'
 import ClapperboardIcon from './clapperboardIcon'
@@ -139,7 +139,7 @@ const Card = (props) => {
     <CardStyled className={props.flipped ? 'is-flipped' : ''}>
       <div className="card__face card__face--front">
         <div className="card-column">
-          <ProfileImage alt="profile_image" className='profile-image' />
+          <ProfileImage alt="profile_image" size="medium" />
         </div>
         <div className="card-column card-right">
           <h1>josh unwin</h1>
@@ -162,9 +162,9 @@ const Card = (props) => {
           <p><FaReact className='skills-icon' /> React | <FaJsSquare className='skills-icon' /> JS | <FaGem className='skills-icon' /> Rails | <FaPython className='skills-icon' /> Python</p>
           <div className="links">
             <Button text="Say hi &nbsp;&#128075" link="/contact" flipCard={flipCard} />
-            <a href="http://www.github.com/josh-unwin" target="_blank"><FaGithub className="social-icon text-3xl" /></a>
-            <a href="https://www.linkedin.com/in/josh-unwin-a4735637/" target="_blank"><FaLinkedin className="social-icon text-3xl" /></a>
-            <a href="https://keybase.io/joshunwin/" target="_blank"><FaKeybase className="social-icon text-3xl" /></a>
+            <a href="http://www.github.com/josh-unwin" target="_blank" rel="noreferrer"><FaGithub className="social-icon text-3xl" /></a>
+            <a href="https://www.linkedin.com/in/josh-unwin-a4735637/" target="_blank" rel="noreferrer"><FaLinkedin className="social-icon text-3xl" /></a>
+            <a href="https://www.twitter.com/joshunwin/" target="_blank" rel="noreferrer"><FaTwitter className="social-icon text-3xl" /></a>
           </div>
         </div>
       </div>

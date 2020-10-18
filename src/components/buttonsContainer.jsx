@@ -1,5 +1,6 @@
-import React from "react"
-import { FaRss, FaCode } from 'react-icons/fa'
+import React from "react";
+import { FaRss, FaCode } from 'react-icons/fa';
+import { Link } from 'gatsby'; 
 
 const ButtonsContainer = (props) => {
   return (
@@ -11,10 +12,10 @@ const ButtonsContainer = (props) => {
         </button>
       </div>
       <div className="w-24 sm:w-40">
-        <a href="https://coda.io/@josh-unwin/blog" target="_blank" className="hover-link cursor-pointer flex flex-col items-center">
+        <Link to="/blog" className="hover-link cursor-pointer flex flex-col items-center">
           <FaRss className="text-3xl sm:text-4xl mb-2" />
           <span className="text-sm">Blog</span>
-        </a>
+        </Link>
       </div>
     </div>
   )
