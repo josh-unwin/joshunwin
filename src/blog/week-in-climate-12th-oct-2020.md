@@ -2,6 +2,10 @@
 title: The week in Climate - wc 12th October 2020
 date: 2019-07-10
 path: /blog/week-in-climate-12th-oct-2020
+image: bfr_at_stage_separation_2-2018.jpg
+categories:
+  - Climate
+  - Environment
 ---
 ## The Good News
 * UK based company ‘Recycling Technologies’ is working to turn previously unrecyclable plastic back into oil suitable for reuse. A £3.1m grant has been rewarded to them along with Neste and Unilever.
