@@ -1,6 +1,6 @@
 ---
 title: The week in Climate - wc 12th October 2020
-date: 2019-07-10
+date: 2020-10-12
 path: /blog/week-in-climate-12th-oct-2020
 image: bfr_at_stage_separation_2-2018.jpg
 categories:
@@ -20,7 +20,7 @@ https://uk.reuters.com/article/uk-japan-trader-mitsui-co-exclusive-idUKKBN26X0B4
 https://www.dw.com/en/german-research-vessel-to-return-from-dying-arctic/a-55238214
 * This September was the warmest on record, topping 2019 with “Temperatures were well above average in many regions across the globe”.
 https://climate.copernicus.eu/surface-air-temperature-september-2020
-* 
+
 ## The Conversation
 * The fantastic team at Ecosia released an excellent video on the importance of sustainable and ultimately regenerative agriculture
 https://www.youtube.com/watch?v=TPkXAi_IKwQ&feature=youtu.be

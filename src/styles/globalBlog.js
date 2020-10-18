@@ -22,8 +22,8 @@ export const GlobalBlogStyles = createGlobalStyle`
   }
 
   a {
-    // color: #469abb;
-    color: #FF9D7A;
+    color: #469abb;
+    // color: #FF9D7A;
   }
 
   h1 {

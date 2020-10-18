@@ -1,7 +1,8 @@
 ---
 title: The week in Climate - wc 5th October 2020
-date: 2019-07-10
+date: 2020-10-05
 path: /blog/week-in-climate-5th-oct-2020
+image: bfr_at_stage_separation_2-2018.jpg
 ---
 ## The Good News
 * China “aim to have CO2 emissions peak before 2030 and achieve carbon neutrality before 2060”. Although that’s still a lot of emissions yet to come it is still a huge target for the largest pollutor in the world. The before in that sentence is also crucial, they will be hoping for better.

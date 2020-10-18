@@ -5,6 +5,9 @@ module.exports = {
     './src/**/*.js',
   ],
   theme: {
+    fontFamily: {
+      'nunito': ['Nunito'],
+    },
     extend: {
       colors: {
         'josh-blue': '#70D6FF',
