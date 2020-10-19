@@ -2,6 +2,7 @@ import React from 'react';
 import ProfileImage from './profileImage';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import { FaUser } from 'react-icons/fa'
 
 const ProfileButtonStyled = styled.div`
   height: 30px;
@@ -15,8 +16,9 @@ const ProfileButtonStyled = styled.div`
 const ProfileButton = () => {
   return (
     <Link to="/">
-      <ProfileButtonStyled className="py-1 text-body-gray font-nunito font-bold border-gray-600 border border-t-0 w-32 flex items-end justify-center rounded-b-lg">
-          Profile
+      <ProfileButtonStyled className="py-1 text-body-gray font-nunito font-bold border-gray-600 border border-t-0 w-32 flex items-center justify-end flex-col rounded-b-lg">
+          <FaUser />
+          <span>Profile</span>
       </ProfileButtonStyled>
     </Link>
   )

@@ -12,12 +12,15 @@ const Blog = ({data}) => {
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.id} className="mb-10 flex">
           <Link to={node.frontmatter.path} className="text-body-gray flex">
-            <div className="w-48 pt-2">
+            <div className="sm:w-48 pt-2">
               <Img className="" fluid={node.frontmatter.image.childImageSharp.fluid} alt={node.frontmatter.title} />
             </div>
           </Link>
-            <div className="ml-4">
+            <div className="sm:ml-4">
             <Link to={node.frontmatter.path} className="text-body-gray flex">
+            <div className="w-24 mr-2 sm:mr-0 sm:w-0 pt-2">
+                <Img className="" fluid={node.frontmatter.image.childImageSharp.fluid} alt={node.frontmatter.title} />
+              </div>
               <h2>{node.frontmatter.title}</h2>
             </Link>
               <div className="flex flex-col lg:flex-row text-xs text-gray-600">

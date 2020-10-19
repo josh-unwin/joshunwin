@@ -1,0 +1,3 @@
+- Create social sharing metadata
+- Create pages/filters for tags/sort by etc
+- Migrate old blogs over
