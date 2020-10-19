@@ -24,6 +24,10 @@ export const GlobalBlogStyles = createGlobalStyle`
   a {
     color: #469abb;
     // color: #FF9D7A;
+
+    &:hover {
+      color: #6dc7eb;
+    }
   }
 
   h1 {

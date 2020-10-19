@@ -8,13 +8,14 @@ import { Link } from 'gatsby';
 import { lightThemeBlog } from '../styles/themeBlog';
 import ProfileImage from '../components/profileImage';
 import ProfileButton from '../components/ProfileButton';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 
 const BlogLayout = ({ children }) => {
   return (
     <ThemeProvider theme={lightThemeBlog}>
       <GlobalBlogStyles />
       <div className="container mx-auto px-4 md:px-32 lg:px-48 xl:px-56">
-        <div className="flex">
+        <div className="flex flex-col sm:flex-row flex-col-reverse">
           <div className="flex-grow py-8">
             <Link to="/blog" className="flex items-center">
               <ProfileImage size="small" />
@@ -24,12 +25,20 @@ const BlogLayout = ({ children }) => {
               </div>
             </Link>
           </div>
-          <div>
+          <div className="flex justify-end">
             <ProfileButton />
           </div>
         </div>
         <hr className="mb-6" />
         {children}
+      <div>
+        <hr />
+        <div className="w-full flex justify-end py-5">
+          <a href="http://www.github.com/josh-unwin" target="_blank" rel="noreferrer"><FaGithub className="social-icon text-2xl text-body-gray hover:text-link-blue mr-3" /></a>
+          <a href="https://www.linkedin.com/in/josh-unwin-a4735637/" target="_blank" rel="noreferrer"><FaLinkedin className="social-icon text-2xl hover:text-link-blue text-body-gray mr-3" /></a>
+          <a href="https://www.twitter.com/joshunwin/" target="_blank" rel="noreferrer"><FaTwitter className="social-icon text-2xl text-body-gray hover:text-link-blue" /></a>
+        </div>
+      </div>
       </div>
     </ThemeProvider>
   )

@@ -30,7 +30,10 @@ export default function Template({ data }) {
       <BlogPostStyle className="blog-post mt-8 mb-12 px-4">
         <div className="text-center mb-8">
           <h1 className="text-4xl">{frontmatter.title}</h1>
-          <h3 className="flex items-center justify-center text-gray-600"><FaRegCalendar className="mr-2" /> {frontmatter.date} <FaRegClock className="ml-10 mr-2 " /> {timeToRead} minute read</h3>
+          <h3 className="mb-0 flex items-center justify-center text-gray-600"><FaRegCalendar className="mr-2" /> {frontmatter.date} <FaRegClock className="ml-10 mr-2 " /> {timeToRead} minute read</h3>
+          {frontmatter.categories.map((category) => (
+            <span className="ml-2 bg-gray-500 text-white rounded px-1 text-xs">{category}</span>
+          ))}
         </div>
         <Img className="" fluid={frontmatter.image.childImageSharp.fluid} alt={frontmatter.title} />
         <div
@@ -50,6 +53,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        categories
         image {
           childImageSharp {
             fluid {

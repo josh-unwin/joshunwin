@@ -12,6 +12,7 @@ module.exports = {
       colors: {
         'josh-blue': '#70D6FF',
         'body-gray': '#363537',
+        'link-blue': '#6dc7eb',
       }
     },
   },

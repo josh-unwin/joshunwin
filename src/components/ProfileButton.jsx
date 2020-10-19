@@ -15,7 +15,7 @@ const ProfileButtonStyled = styled.div`
 const ProfileButton = () => {
   return (
     <Link to="/">
-      <ProfileButtonStyled className="py-1 text-body-gray font-nunito font-bold bg-blue-200 w-32 flex items-end justify-center rounded-b-lg">
+      <ProfileButtonStyled className="py-1 text-body-gray font-nunito font-bold border-gray-600 border border-t-0 w-32 flex items-end justify-center rounded-b-lg">
           Profile
       </ProfileButtonStyled>
     </Link>
