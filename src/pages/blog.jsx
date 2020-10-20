@@ -56,6 +56,7 @@ query {
         id
         frontmatter {
           title
+          subtitle
           path
           date(formatString: "DD MMMM, YYYY")
           categories

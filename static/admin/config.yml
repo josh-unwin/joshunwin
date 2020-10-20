@@ -39,12 +39,13 @@ collections:
   path: "{{slug}}-{{year}}-{{month}}-{{day}}"
   fields: # The fields for each document, usually in front matter
     - {label: "Title", name: "title", widget: "string"}
+    - {label: "Sub Title", name: "subtitle", widget: "string"}
     - {label: "Date", name: "date", widget: "datetime"}
     - {label: "Image", name: "image", widget: "image"}
     - {label: "Categories",
        name: "categories",
        widget: "select",
        multiple: true,
-       options: ["Climate", "Environment", "Tech"]
+       options: ["Climate", "Environment", "Tech", "Web Development"]
       }
     - {label: "Body", name: "body", widget: "markdown"}

@@ -1,3 +1,13 @@
+---
+title: Everything I've done to reduce environmental impact
+subtitle: An ongoing list.
+date: 2018-12-01
+path: /blog/my-environmental-list
+image: bfr_at_stage_separation_2-2018.jpg
+categories:
+- Environment
+- Climate
+---
 ## Background
 Jump straight to the list if you prefer!
 

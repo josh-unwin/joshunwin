@@ -1,3 +1,12 @@
+---
+title: Friends don't let friends chat unencrypted
+subtitle: A look at Signal messenger
+date: 2019-02-08
+path: /blog/a-look-at-signal-messenger
+image: bfr_at_stage_separation_2-2018.jpg
+categories:
+- Tech
+---
 Have your heard of Signal? Depending on who you ask, there's a very good chance the answer to that question is, unfortunately, no. To get to the point, Signal is a free messaging platform much like WhatsApp, Facebook Messenger, Google Hangouts or Telegram, but it has a focus on security and privacy.
 
 Speaking of privacy, for this post I'm going to assume you agree that privacy is important, whether you have something to hide or not. In a context where someone can reasonably assume to be in private be it in inside their own home, or sending a direct message to a friend as is this case, an individual should not need to feel concern that someone might be watching. If you somehow disagree with the above, well, I guess you may as well continue on with your day, this one isn't for you.
