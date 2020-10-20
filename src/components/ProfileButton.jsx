@@ -17,8 +17,8 @@ const ProfileButton = () => {
   return (
     <Link to="/">
       <ProfileButtonStyled className="py-1 text-body-gray font-nunito font-bold border-gray-600 border border-t-0 w-32 flex items-center justify-end flex-col rounded-b-lg">
-          <FaUser />
-          <span>Profile</span>
+        <FaUser />
+        <span>Profile</span>
       </ProfileButtonStyled>
     </Link>
   )
