@@ -4,7 +4,7 @@ import BlogLayout from '../components/BlogLayout';
 import styled from 'styled-components';
 import { FaRegClock, FaRegCalendar } from 'react-icons/fa';
 import Img from "gatsby-image";
-
+import SEO from "../components/seo"
 
 const BlogPostStyle = styled.div`
 h2 {
@@ -15,7 +15,7 @@ h2 {
 ul {
   list-style-position: outside;
   list-style-type: square;
-
+  
   li {
     margin-bottom: 0.4em;
   }
@@ -24,9 +24,10 @@ ul {
 
 export default function Template({ data }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
-  const { frontmatter, html, timeToRead } = markdownRemark;
+  const { frontmatter, html, timeToRead, excerpt } = markdownRemark;
   return (
     <BlogLayout>
+      <SEO description={excerpt} title={frontmatter.title} />
       <BlogPostStyle className="blog-post mt-8 mb-12 px-4">
         <div className="text-center mb-8">
           <h1 className="text-4xl">{frontmatter.title}</h1>
@@ -52,6 +53,7 @@ export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
+      excerpt
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         path

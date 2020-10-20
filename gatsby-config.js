@@ -5,7 +5,8 @@ module.exports = {
     author: `@joshunwin`,
     url: 'https://www.joshunwin.com',
     urlInsecure: 'http://www.joshunwin.com',
-    image: '/images/seo-preview.png'
+    image: '/images/seo-preview.png',
+    twitterUsername: "@joshunwin",
   },
   plugins: [
     `gatsby-plugin-postcss`,
