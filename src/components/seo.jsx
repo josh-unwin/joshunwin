@@ -71,7 +71,7 @@ function SEO({ description, lang, meta, title, image: metaImage }) {
         },
         {
           property: `twitter:image`,
-          content: imgUrlInsecure,
+          content: imgUrl,
         },
         {
           name: `twitter:creator`,

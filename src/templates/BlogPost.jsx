@@ -20,6 +20,21 @@ ul {
     margin-bottom: 0.4em;
   }
 }
+
+.blog-post-content {
+  h4 {
+    font-weight: bold;
+    letter-spacing: 0.025em;
+    margin-bottom: 0;
+    margin-top: 2em;
+  }
+
+  p {
+    margin-top: 0;
+    font-size: 1em;
+    line-height: 2em;
+  }
+}
 `
 
 export default function Template({ data }) {
