@@ -29,8 +29,6 @@ function SEO({ description, lang, meta, title, image: metaImage }) {
   const imgUrl = metaImage && metaImage.src ? `${site.siteMetadata.url}${metaImage.src}` : `${site.siteMetadata.url}${site.siteMetadata.image}`
   const imgUrlInsecure = metaImage && metaImage.src ? `${site.siteMetadata.urlInsecure}${metaImage.src}` : `${site.siteMetadata.urlInsecure}${site.siteMetadata.image}`
 
-  console.log(metaImage && metaImage.src ? "IMAGE GOOD" : "IMAGE BAD");
-
   return (
     <Helmet
       htmlAttributes={{
