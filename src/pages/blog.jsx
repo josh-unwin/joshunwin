@@ -5,8 +5,6 @@ import BlogLayout from '../components/BlogLayout';
 import { FaRegClock, FaRegCalendar } from 'react-icons/fa';
 
 const Blog = ({data}) => {
-  console.log(data.allMarkdownRemark.edges[0].node.frontmatter.categories[0]);
-
   return (
     <BlogLayout>
       {data.allMarkdownRemark.edges.map(({ node }) => (
