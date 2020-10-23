@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, graphql } from "gatsby";
 import Img from "gatsby-image";
 import BlogLayout from '../components/BlogLayout';
+import BlogFilterControls from '../components/BlogFilterControls';
 import { FaRegClock, FaRegCalendar } from 'react-icons/fa';
 
-const Blog = ({data}) => {
+const Blog = ({data, location}) => {
+  const [sortByMethod, setSortByMethod] = useState("date_asc");
+  
   return (
     <BlogLayout>
+      <BlogFilterControls location={location} sortByMethod={sortByMethod} setSortByMethod={setSortByMethod} />
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.id} className="mb-10 flex">
           <Link to={node.frontmatter.path} className="text-body-gray flex">
@@ -28,7 +32,7 @@ const Blog = ({data}) => {
                 </span>
                 <div className="ml-0 lg:ml-2">
                   {node.frontmatter.categories.map((category) => (
-                    <span className="mr-2 bg-gray-500 text-white rounded px-1 w-auto inline-block">{category}</span>
+                    <span key={category} className="mr-2 bg-gray-500 text-white rounded px-1 w-auto inline-block">{category}</span>
                   ))}
                 </div>
               </div>
@@ -43,9 +47,9 @@ const Blog = ({data}) => {
 }
 
 export const blogsQuery = graphql`
-query {
+query($category: [String]) {
   allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(blog)/.*.md$/"}},
+    filter: {fileAbsolutePath: {regex: "/(blog)/.*.md$/"}, frontmatter: {categories: {in: $category}}},
     sort: { fields: [frontmatter___date], order: DESC }
     ) {
     totalCount

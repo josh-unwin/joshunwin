@@ -2,7 +2,7 @@
 title: Friends don't let friends chat unencrypted
 subtitle: A look at Signal messenger
 date: 2019-02-08
-path: /blog/a-look-at-signal-messenger
+path: /blog/post/a-look-at-signal-messenger
 image: bfr_at_stage_separation_2-2018.jpg
 categories:
 - Tech

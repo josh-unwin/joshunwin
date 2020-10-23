@@ -34,6 +34,12 @@ ul {
     font-size: 1em;
     line-height: 2em;
   }
+
+  blockquote {
+    font-size: 2em;
+    font-style: italic;
+    padding: 10px;
+  }
 }
 `
 
@@ -55,7 +61,9 @@ export default function Template({ data }) {
             <span className="ml-2 bg-gray-500 text-white rounded px-1 text-xs">{category}</span>
           ))}
         </div>
-        <Img className="" fluid={frontmatter.image.childImageSharp.fluid} alt={frontmatter.title} />
+        <div className="md:border-8 md:p-1 mb-5">
+          <Img className="" fluid={frontmatter.image.childImageSharp.fluid} alt={frontmatter.title} />
+        </div>
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}

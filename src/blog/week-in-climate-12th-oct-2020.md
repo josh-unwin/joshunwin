@@ -2,7 +2,7 @@
 title: The week in Climate - wc 12th October 2020
 subtitle: A  summary of the key things in climate/environment I’ve read this week.
 date: 2020-10-12
-path: /blog/week-in-climate-12th-oct-2020
+path: /blog/post/week-in-climate-12th-oct-2020
 image: bfr_at_stage_separation_2-2018.jpg
 categories:
   - Climate
