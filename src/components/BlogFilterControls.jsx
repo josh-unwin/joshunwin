@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useStaticQuery, graphql } from "gatsby";
-import { FaCaretDown, FaSortDown } from 'react-icons/fa';
+import { FaCaretUp, FaCaretDown } from 'react-icons/fa';
 
 const BlogFilterControls = ({ setSortByMethod, sortByMethod, location }) => {
   const regexForUrlExtraction = /\/.*\/(.*)/;
@@ -27,18 +27,22 @@ const BlogFilterControls = ({ setSortByMethod, sortByMethod, location }) => {
   return (
     <div className="flex justify-end">
       <div className="flex">
-        <div onClick={() => { setFilterByMenuOpen(!filterByMenuOpen) }} className="p-2 my-2 border rounded-l-sm border-r-0 text-xs cursor-pointer bg-gray-200 flex-grow">Filter By:</div>
-        <div className="relative p-2 my-2 mr-3 border rounded-r-sm text-xs cursor-pointer hover:bg-gray-300 w-40">
-          <div className="flex" onClick={() => { setFilterByMenuOpen(!filterByMenuOpen) }}><span className="flex-grow capitalize">{currentFilter}</span><FaSortDown /></div>
+        <div onClick={() => { setFilterByMenuOpen(!filterByMenuOpen) }} className="p-3 my-2 cursor-pointer flex-grow">Filter By:</div>
+        <div className="relative p-3 my-2 cursor-pointer hover:bg-gray-100 w-40">
+        <div className="flex items-center" onClick={() => { setFilterByMenuOpen(!filterByMenuOpen) }}>
+          <span className="flex-grow capitalize">{currentFilter}</span>
+          {filterByMenuOpen ? <FaCaretUp /> : <FaCaretDown />}
+        </div>
           {filterByMenuOpen &&
             <button onClick={() => { setFilterByMenuOpen(false) }} className="hideDropdown inset-0 w-full h-full fixed cursor-default"></button>
           }
           {filterByMenuOpen &&
-            <div className="dropdownMenu absolute bg-white rounded shadow mt-2 text-xs w-40 right-0">
+            <div className="dropdownMenu absolute bg-white shadow-md mt-2 p-3 w-40 right-0">
               {postCategories.map(category =>
-                <div>
+                <div className="p-1">
                   <Link to={category.toLowerCase() === "all" ? "/blog" : `/blog/${category.toLowerCase().replace(" ", "-")}`}>
-                    {category}
+                    <span className="text-body-gray hover:text-link-blue">{category}
+                      </span>
                   </Link>
                 </div>
               )}

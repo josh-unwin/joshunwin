@@ -12,7 +12,7 @@ const Blog = ({data, location}) => {
     <BlogLayout>
       <BlogFilterControls location={location} sortByMethod={sortByMethod} setSortByMethod={setSortByMethod} />
       {data.allMarkdownRemark.edges.map(({ node }) => (
-        <div key={node.id} className="mb-10 flex">
+        <div key={node.id} className="mt-4 mb-10 flex">
           <Link to={node.frontmatter.path} className="text-body-gray flex">
             <div className="sm:w-48 pt-2">
               <Img className="" fluid={node.frontmatter.image.childImageSharp.fluid} alt={node.frontmatter.title} />
@@ -32,7 +32,9 @@ const Blog = ({data, location}) => {
                 </span>
                 <div className="ml-0 lg:ml-2">
                   {node.frontmatter.categories.map((category) => (
-                    <span key={category} className="mr-2 bg-gray-500 text-white rounded px-1 w-auto inline-block">{category}</span>
+                    <Link to={`/blog/${category.toLowerCase().replace(" ", "-")}`}>
+                      <span key={category} className="mr-2 bg-gray-500 text-white rounded px-1 w-auto inline-block">{category}</span>
+                    </Link>
                   ))}
                 </div>
               </div>

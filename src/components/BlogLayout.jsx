@@ -29,7 +29,7 @@ const BlogLayout = ({ children }) => {
             <ProfileButton />
           </div>
         </div>
-        <hr className="mb-6" />
+        <hr className="" />
         {children}
       <div>
         <hr />
