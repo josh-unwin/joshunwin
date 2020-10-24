@@ -3,10 +3,10 @@ title: Everything I've done to reduce environmental impact
 subtitle: An ongoing list.
 date: 2018-12-01
 path: /blog/post/my-environmental-list
-image: bfr_at_stage_separation_2-2018.jpg
+image: photo-1522735338363-cc7313be0ae0.jpg
 categories:
-- Environment
-- Climate
+  - Environment
+  - Climate
 ---
 ## Background
 Jump straight to [the list](#list) if you prefer!
