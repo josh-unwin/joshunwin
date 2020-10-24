@@ -7,7 +7,6 @@ image: instagram-firefox.png
 categories:
   - Tech
 ---
-
 The Zuckerburg monolith that is Facebook and Co is seeing more criticism than ever for its lack of regard for privacy, its continued refusal to remove hate speech, their questionable advertising partners and the usage/collection of our personal data.
 
 Many are feeling increased desire to cut ties with the social giant, and having deleted my Facebook account a few years ago now I can say it’s been completely worth it, I’ve never looked back.
@@ -17,26 +16,45 @@ That said, I’m much more attached to Instagram. I’m still as frustrated as e
 So let’s get rid of them.
 
 ## Here’s how
+
 This tip is only available for Android, due to limitations in iOS it’s not possible to bring add-ons to Firefox Mobile on iOS for now.
 
 ##### 1. Use Firefox Mobile
+
 Firefox have just released a completely new updated version of their Android app and it’s really nice. What’s more is they have support for desktop-like addons which allow us to use Ublock Origin, the best ad blocking tool available for browsers.
 Download the Android App here.
 
 ##### 2. Use Instagram’s PWA (ie, mobile site)
-Fortunately for us, Instagram finally made the web version of their app much more feature-complete providing an experience which is very close to that of the native counterpart. It’s also PWA compatible which basically means we can ‘install’ it on own mobile device to use like it’s a native app.
 
+Fortunately for us, Instagram finally made the web version of their app much more feature-complete providing an experience which is very close to that of the native counterpart. It’s also PWA compatible which basically means we can ‘install’ it on own mobile device to use like it’s a native app.
 
 ## Need more help?
 
 ##### Installing the add-ons
+
 Your Firefox UI might look at little different, but somewhere in your options you should find ‘Add-ons’. Go into there, and enable at least uBlock Origin. I’d also recommend added HTTPS Everywhere and Privacy Badger
-1. Screenshot_20200611-120506.jpg           2. Screenshot_20200611-114612.jpg
+
+\## 1.
+
+![](screenshot_20200611-120506.jpg)
+
+\## 2.
+
+![](screenshot_20200611-114612.jpg)
 
 ##### Installing Instagram as a PWA/web app
+
 Visit Instagram from within Firefox and login so you’re on the Instagram home screen. Open up your Firefox options menu, you should find an ‘Install’ button. Tapping that will allow you to add Instagram to your home screen. It’ll appear like it’s just a link to Instagram, but it is doing more than just that. It also installs some of the essential front-end code for the site to your device so that load times are faster, and while Instagram isn’t supporting it yet, it can also enable offline access to a web app. 
 Once you’ve done this, opening the web app via the home screen shortcut will also open Instagram full screen, without Firefox’s toolbar to give you a more native experience.
-1. Screenshot_20200611-114500.jpg              2. Screenshot_20200611-120253.jpg
+
+\## 1.
+
+ 
+
+\## 2.
+
+![](screenshot_20200611-120253.jpg)
 
 ## That’s it!
+
 Hope you found this quick little tip useful! You should be able to do the same thing with Facebook itself too, switch to their web app version with Firefox. Fingers crossed they don’t implement some restriction to prevent us from using the web app on mobile to avoid this ad blocking technique..
