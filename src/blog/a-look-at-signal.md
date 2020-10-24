@@ -3,9 +3,9 @@ title: Friends don't let friends chat unencrypted
 subtitle: A look at Signal messenger
 date: 2019-02-08
 path: /blog/post/a-look-at-signal-messenger
-image: bfr_at_stage_separation_2-2018.jpg
+image: signal-header.gif
 categories:
-- Tech
+  - Tech
 ---
 Have your heard of Signal? Depending on who you ask, there's a very good chance the answer to that question is, unfortunately, no. To get to the point, Signal is a free messaging platform much like WhatsApp, Facebook Messenger, Google Hangouts or Telegram, but it has a focus on security and privacy.
 
