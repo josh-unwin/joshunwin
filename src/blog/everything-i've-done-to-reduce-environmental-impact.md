@@ -25,7 +25,7 @@ The point of this is both a personal exercise of keeping track of things, but al
 
 That's a long intro.. Onto the list. This will be continuously updated as time goes by ( Kaizen, continuous improvement!). Each point is also going to be as succinct as possible to make it a quick and easy list to read. The order is organic.
 
-## <a name="listππ"></a>The ever-growing list
+## <a name="list"></a>The ever-growing list
 
 ---
 
@@ -46,7 +46,7 @@ image.png
 I went with Bulb Energy who promise 100% renewable electricity supply at a very competitive price.
 
 #### I buy less crap.
-No matter how small, all physical goods have an environment footprint. I'm slowly moving away from consumerism as best I can and avoiding buying stuff I don't need. Got a music streaming service? You probably don't need the CD too. Got an iPhone X? You probably don't need an XS.
+No matter how small, all physical goods have an environment footprint. I'm slowly moving away from consumerism as best I can and avoiding buying stuff I don't need. Got a music streaming service? You probably don't need the CD too. Got an iPhone 11? You probably don't need an 12.
 
 #### I say no to pointless 'free stuff'.
 If you've already got enough pens to last a lifetime, you don't need that free pen with someones logo on it.
@@ -124,7 +124,7 @@ The aviation sector is unsustainable and a global reduction in flights is essent
 There has been some debate over the usefulness of smart plugs and it's true their environmental benefits are certainly minimal, especially if you don't make use of them much. But I bought some for convenience too and now have them scheduled to completely switch off my TV and other devices at midnight, until I turn them back on manually. This reduces how long my devices are in stand-by mode significantly as I can often go days without using my TV (and therefore turning it back on).
 
 #### I limit my car use.
-My car only gets used a handful of times a month, only using it when it's strictly necessary.
+I aim to cycle or walk when possible, limiting time driving to essentials only.
 
 
 

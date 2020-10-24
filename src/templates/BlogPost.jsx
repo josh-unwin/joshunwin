@@ -8,6 +8,7 @@ import SEO from "../components/seo"
 
 const BlogPostStyle = styled.div`
 h2 {
+  font-size: 26px;
   margin-top: 2em;
   margin-bottom: 0.2em;
 };
@@ -23,13 +24,21 @@ ul {
 
 .blog-post-content {
   h4 {
+    font-size: 1.3em;
     font-weight: bold;
     letter-spacing: 0.025em;
     margin-bottom: 0;
     margin-top: 2em;
   }
 
-  p {
+  h5 {
+    font-weight: bold;
+    letter-spacing: 0.025em;
+    margin-bottom: 0;
+    margin-top: 2em;
+  }
+
+  p, li {
     margin-top: 0;
     font-size: 1em;
     line-height: 2em;
@@ -39,6 +48,10 @@ ul {
     font-size: 2em;
     font-style: italic;
     padding: 10px;
+  }
+
+  hr {
+    margin: 20px 0;
   }
 }
 `

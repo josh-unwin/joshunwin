@@ -10,7 +10,7 @@ categories:
 ---
 One area of web development that has got me excited since completing the LeWagon Bootcamp is the JAMstack. A modern approach to building websites (see below for more). With that said, I'd like to share this little project I have been working on which has served as a learning piece and also an opportunity to help support a small grassroots NGO I was able to visit during my travels to Indonesia.
 
-> Check out the site so far: canborneo.id
+> Check out the site so far: [canborneo.id](http://www.canborneo.id)
 
 ## About CAN Borneo
 No alt text provided for this image
