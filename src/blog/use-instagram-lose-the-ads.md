@@ -3,9 +3,9 @@ title: Use Instagram, lose the ads.
 subtitle: This ones just for Android users
 date: 2020-06-11
 path: /blog/post/use-instagram-lose-the-ads
-image: bfr_at_stage_separation_2-2018.jpg
+image: instagram-firefox.png
 categories:
-- Tech
+  - Tech
 ---
 
 The Zuckerburg monolith that is Facebook and Co is seeing more criticism than ever for its lack of regard for privacy, its continued refusal to remove hate speech, their questionable advertising partners and the usage/collection of our personal data.
