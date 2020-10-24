@@ -3,10 +3,10 @@ title: JAMstack and CAN Borneo
 subtitle: My first solo project after finishing a coding bootcamp & CAN Borneo
 date: 2020-03-03
 path: /blog/post/jamstack-and-can-borneo
-image: bfr_at_stage_separation_2-2018.jpg
+image: 20190519_102904_0023.jpg.jpg
 categories:
-- Environment
-- Web Development
+  - Environment
+  - Web Development
 ---
 One area of web development that has got me excited since completing the LeWagon Bootcamp is the JAMstack. A modern approach to building websites (see below for more). With that said, I'd like to share this little project I have been working on which has served as a learning piece and also an opportunity to help support a small grassroots NGO I was able to visit during my travels to Indonesia.
 
