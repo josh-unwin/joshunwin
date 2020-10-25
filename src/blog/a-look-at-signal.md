@@ -3,7 +3,7 @@ title: Friends don't let friends chat unencrypted
 subtitle: A look at Signal messenger
 date: 2019-02-08
 path: /blog/post/a-look-at-signal-messenger
-image: signal-header.gif
+image: signal-header.png
 categories:
   - Tech
 ---
