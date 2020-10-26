@@ -7,7 +7,6 @@ image: signal-header.png
 categories:
   - Tech
 ---
-![](BLOG_IMAGES/dorretta-herald-edit.jpeg)
 
 Have your heard of Signal? Depending on who you ask, there's a very good chance the answer to that question is, unfortunately, no. To get to the point, Signal is a free messaging platform much like WhatsApp, Facebook Messenger, Google Hangouts or Telegram, but it has a focus on security and privacy.
 

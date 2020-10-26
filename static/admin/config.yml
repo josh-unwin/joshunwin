@@ -39,9 +39,9 @@ collections:
   label: "Blog"
   folder: "src/blog"
   create: true
-  media_folder: 'BLOG_IMAGES/'
-  public_folder: 'BLOG_IMAGES/'
-  path: "{{slug}}-{{year}}-{{month}}-{{day}}"
+  media_folder: ''
+  public_folder: ''
+  path: "{{slug}}-{{year}}-{{month}}-{{day}}/index"
   fields: # The fields for each document, usually in front matter
     - {label: "Title", name: "title", widget: "string"}
     - {label: "Sub Title", name: "subtitle", widget: "string"}

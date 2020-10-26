@@ -8,7 +8,6 @@ categories:
   - Environment
   - Web Development
 ---
-![](BLOG_IMAGES/dorretta-herald-edit.jpeg)
 
 One area of web development that has got me excited since completing the LeWagon Bootcamp is the JAMstack. A modern approach to building websites (see below for more). With that said, I'd like to share this little project I have been working on which has served as a learning piece and also an opportunity to help support a small grassroots NGO I was able to visit during my travels to Indonesia.
 

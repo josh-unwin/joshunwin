@@ -11,8 +11,6 @@ categories:
 ---
 ![](1ng0serktl.gif)
 
-![](dorretta-herald.jpg)
-
 ^ The result. Make Ecosia your default search engine and add g  as a keyword to get to Google.
 
 - - -
