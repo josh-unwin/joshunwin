@@ -52,14 +52,15 @@ There’s a few ways to do this:
   Keyword: ecosia.org 
   URL: https://www.ecosia.org/search?q=%s&addon=opensearch
 
-  ![](screenshot-2020-05-21-at-18.52.13.png)
+  ![](20190519_102904_0023.jpg.jpg)
 
-  Make sure that’s your default, and you’re good to go.
+![](screenshot-2020-05-21-at-18.52.13.png)
+
+Make sure that’s your default, and you’re good to go.
 
 ##### Step 2: Set the g keyword for Google search
 
 From the same ‘manage search engines’ settings page (Settings → Search engine → Manage search engines ), click the ‘3 dot’ menu for the Google search engine and change the keyboard value to g. This allows you to simply type g followed by TAB to get to Google search.
-
 
 ![](screenshot-2020-05-21-at-18.56.40.png)
 
@@ -79,7 +80,6 @@ This setting can be found in Preferences → Search → One-Click Search Engines
 Find Google, double click in the ‘Keyword’ cell and type g .
 
 ![](screenshot-2020-05-21-at-21.03.15.png)
-
 
 And that’s it, you’re done! Firefox’s keyword usage works differently (arguably better) than Chrome’s, making a search in the omnibar will default to Ecosia and to use Google you simply start your search with g  . Wanna search for puppies on Google?
 Type g puppies .
