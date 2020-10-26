@@ -10,6 +10,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-postcss`,
+    `gatsby-plugin-netlify-cms-paths`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -38,7 +39,14 @@ module.exports = {
         path: `${__dirname}/src/project-images`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-plugin-netlify-cms-paths`,
+        ],
+      },
+    },
     'gatsby-plugin-styled-components',
     `gatsby-plugin-react-helmet`,
     {
