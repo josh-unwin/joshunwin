@@ -21,7 +21,7 @@ const BlogLayout = ({ children }) => {
               <ProfileImage size="small" />
               <div className="flex flex-col ml-4">
                 <span className= "text-body-gray -mb-1 text-4xl ">Josh Unwin</span>
-                <span className="text-gray-500 text-xl -mt-1">A blog</span>
+                <span className="text-gray-600 text-xl -mt-1">A blog</span>
               </div>
             </Link>
           </div>

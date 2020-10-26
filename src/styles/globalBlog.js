@@ -11,7 +11,7 @@ export const GlobalBlogStyles = createGlobalStyle`
   }
 
   body {
-    font-family: 'Lora', serif;
+    font-family: 'Nunito', serif;
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
   }

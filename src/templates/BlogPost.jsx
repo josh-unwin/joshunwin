@@ -65,7 +65,7 @@ export default function Template({ data }) {
       <BlogPostStyle className="blog-post mt-8 mb-12 px-4">
         <div className="text-center mb-8">
           <h1 className="text-4xl">{frontmatter.title}</h1>
-          <span className="mt-0 text-xl text-gray-500">{frontmatter.subtitle}</span>
+          <span className="mt-0 text-xl text-gray-600">{frontmatter.subtitle}</span>
           <div className="mt-1 mb-0 flex sm:flex-row flex-col text-gray-600 justify-center">
             <h3 className="mb-1 flex items-center justify-center"><FaRegCalendar className="mr-2" /> {frontmatter.date}</h3>
             <h3 className="mb-1 flex items-center justify-center"><FaRegClock className="sm:ml-10 mr-2 " /> {timeToRead} minute read</h3>
