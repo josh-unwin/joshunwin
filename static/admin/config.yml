@@ -3,6 +3,9 @@ backend:
   repo: josh-unwin/joshunwin
   branch: master
 
+media_folder: static/media
+public_folder: /media
+
 site_url: https://www.joshunwin.com
 
 collections:
