@@ -11,6 +11,8 @@ categories:
 ---
 ![](1ng0serktl.gif)
 
+![](dorretta-herald.jpg)
+
 ^ The result. Make Ecosia your default search engine and add g  as a keyword to get to Google.
 
 - - -
@@ -51,8 +53,6 @@ There’s a few ways to do this:
   Search engine: Ecosia 
   Keyword: ecosia.org 
   URL: https://www.ecosia.org/search?q=%s&addon=opensearch
-
-  ![](20190519_102904_0023.jpg.jpg)
 
 ![](screenshot-2020-05-21-at-18.52.13.png)
 
